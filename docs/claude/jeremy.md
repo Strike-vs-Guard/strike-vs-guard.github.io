@@ -501,6 +501,21 @@ and two sentences lost their dates. Kept: dates of flights, posts, "as of" notes
 and an intern's dates. Two reviewer agents checked it before the push (nothing left on any built page;
 wording claims no more than before; schema comments and the handoff tidied from their findings).
 
+## 27. "Milestones", no open-problem lists, no dates (24 November 2026)
+> Can you change "Status today" to "Milestones". Remove the section "What we haven't solved yet" in
+> the research page. I think you can remove all date references throughout the webpage. … Just
+> remove the date for "EPFL", that is OK. … Conference name can keep as IROS 2026.
+
+"At a glance" now says "Milestones". The two "What we haven't solved yet" lists (Simulation,
+Localisation) are gone from Research. Every date a visitor could read is gone: page text and
+captions (an agent reworded 18 content files), post dates on every listing and post page, "updated"
+and "as of" lines, the footer's year, the dates in two clip banners, and the camera clock in one clip
+and two lab photos. Kept: publication venue and year, "IROS 2026" as a conference's name, post
+`date:` and partner `updated:` for ordering, dated addresses, and the small clock inside CMU's own
+recordings. Two reviewer agents checked it. The second found that some sentences, once undated, read
+as standing claims or current plans ("have flown", "Next come both drones moving"); those were
+reworded so each past flight reads as one past flight.
+
 ---
 
 ## Review links (private claude.ai pages, owner: Jeremy)

@@ -1,6 +1,6 @@
 ---
 title: Two Starlings fly together in Singapore
-date: 2026-11-13
+date: 2026-11-12
 partner: st
 author: Jeremy Chia Hwe Huang
 summary: >-
@@ -20,10 +20,10 @@ gallery:
     caption: The flight seen from above. Drone A holds its position, drone B is sent towards it, and the safety filter holds them 1.5 m apart.
   - src: ./images/sg-geofence-ground-station.jpg
     alt: Ground-station view of one drone at the wall of a green box, with a blue dot outside the box
-    caption: The geofence on 11 November. The goal (blue dot) is outside the green box, and the drone stops at the wall.
+    caption: The geofence. The goal (blue dot) is outside the green box, and the drone stops at the wall.
 ---
 
-On 11 November a Starling flew in our Singapore lab on the AirStack software we share with CMU. It
+A Starling flew in our Singapore lab on the AirStack software we share with CMU. It
 took off, flew to points we sent from the ground station and landed, with nobody on the sticks. We
 then sent it goals beyond the edge of the flight volume, and the geofence braked it at the edge
 each time.
@@ -32,7 +32,7 @@ The next day we put a second Starling in the air beside it. One drone held its p
 the other straight at it. The safety filter stopped the moving drone short and eased the hovering
 one aside, holding the two 1.5 m apart.
 
-<figure class="clip"><video controls muted playsinline preload="none" poster="../../../media/st-two-starlings-hangar.jpg" aria-label="Flight clip: two Starlings take off and return in the Singapore lab"><source src="../../../media/st-two-starlings-hangar.mp4" type="video/mp4"></video><figcaption>The two Starlings on 12 November 2026, from the lab's camera. The clip shows the take-off and, later in the same flight, the return to land. Watch both drones lift from the floor tiles together. Video: NEAR Lab, ST Engineering.</figcaption></figure>
+<figure class="clip"><video controls muted playsinline preload="none" poster="../../../media/st-two-starlings-hangar.jpg" aria-label="Flight clip: two Starlings take off and return in the Singapore lab"><source src="../../../media/st-two-starlings-hangar.mp4" type="video/mp4"></video><figcaption>The two Starlings, from the lab's camera. The clip shows the take-off and, later in the same flight, the return to land. Watch both drones lift from the floor tiles together. Video: NEAR Lab, ST Engineering.</figcaption></figure>
 
-These are the first team flights in Singapore. Next come both drones moving, then the formations
-and random goals already flown at CMU.
+These were the first team flights in Singapore. Planned after them: both drones moving, then the
+formations and random goals already flown at CMU.

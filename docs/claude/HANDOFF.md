@@ -39,6 +39,16 @@ site owner driving the work is Jeremy (ST Engineering); the ST lead is William T
 ## 4. Current state
 
 **As of 24 Nov 2026 (newest first; the older notes below are history):**
+- **No dates on the site at all (owner, 24 Nov, later the same day).** Page text, captions, alt text,
+  post titles and listings carry no day, month or year; templates print no post date, no "updated"
+  date and no "as of"; the footer has no year. Clip banners carry no date (`st-fig8-two-starlings`,
+  `st-cf-game`), and the camera's clock is painted out of `st-hand-flown-vs-filter-inset.mp4` and two
+  lab photos (`delogo` / OpenCV inpaint). Kept: publication `venue:`/`year:`, conference names with
+  their year ("IROS 2026"), post `date:` and partner `updated:` (ordering only), dated addresses, and
+  the small clock inside CMU's own recordings (`starling-cmu.mp4`, `content/partners/CMU/
+  starling-flight-cage.jpg`, CMU's Flights clips). Rule: STANDARDS §2.
+- **"At a glance" says "Milestones"** (was "Status today"); the "What we haven't solved yet" lists
+  are gone from Research (`OpenList.astro` deleted, `open:`/`openLabel:` out of the schema).
 - **No programme timeline on the site (owner, 24 Nov).** The three-year timeline on Flights is now
   "What's next" (`content/programme/next.md`, `WhatsNext.astro`): three cards with a "Work in
   progress" or "Future work" chip and no dates. "At a glance" lost its Timeline and Next milestone
@@ -127,7 +137,7 @@ public `svg-website` repo (with consent, credit "Photo/Video: CMU AirLab"; that 
 director, outside professor) said the site read as machine-written. Changes: `people:` per partner
 (row with faces; team photo caption names everyone); slogans rewritten (hero title unchanged); partner
 pages in first person; `open:`/`openLabel:` ("What we haven't solved yet") on Localisation, Simulation
-and Flights; updates as a dated log with `author:`; footer note "Four labs, in Singapore, Pittsburgh
+and Flights (removed 24 Nov 2026); updates as a dated log with `author:` (dates no longer shown); footer note "Four labs, in Singapore, Pittsburgh
 and Philadelphia. Funded by HTX."; directions as a plain numbered list; drone drawing without dot grid
 or corner marks; Flights = lead clip + grid with stamps and "watch" cues + annotated lab photo; logos
 sized by visual weight (`src/lib/logo.ts`). Voice rules: STANDARDS §2. Panel brief:

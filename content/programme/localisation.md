@@ -15,11 +15,6 @@ items:
   - label: "3 · Moving obstacles"
     title: Where is the other team?
     text: The other side does not share where it is, so its drones are treated as moving obstacles, detected by our drones' cameras and two ground sensor stations.
-openLabel: What we haven't solved yet
-open:
-  - "The 0.081 m error is measured against the drone's own estimate, not against the simulator's true position."
-  - "We have no number from a real Starling yet. The first, from a camera carried by hand, is the next target."
-  - "In a bare, flat world the camera's path jumped 5–10 m away. It needs things to look at, and we can't choose the scenery outdoors."
 note: Only layer 1 steers a drone. Layers 2 and 3 feed the team strategy and the safety filter, never the autopilot, so a bad message from a teammate can never crash a drone.
 image: ./images/loc-sim-scenes.png
 imageAlt: "Two plots of a simulated flight path. Left: in a bare flat world the camera's path (red) jumps away from the drone's own estimate (grey). Right: over a construction site the two paths stay together."

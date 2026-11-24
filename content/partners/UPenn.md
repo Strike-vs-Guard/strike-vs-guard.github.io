@@ -82,7 +82,7 @@ We train in our own simulator. Single-drone versions came first, as a baseline. 
 teams train against each other have now produced candidate strategies; we haven't scored them
 against the rules yet.
 
-From the July 2026 report: with the rules as the training signal, the planner scaled from
+From an earlier programme report: with the rules as the training signal, the planner scaled from
 one-against-one up to four-against-four and eight-against-four reach-avoid games (one team has to
 reach a goal while avoiding the other), and it learned faster than a standard reinforcement-learning
 baseline. A second approach, a hierarchical policy, gives each drone a skill in a capture-the-flag

@@ -7,8 +7,7 @@
 import Base from '../../layouts/Base.astro';
 import PageHead from '../../components/sections/PageHead.astro';
 import { url } from '../../lib/url';
-import { fmtDate } from '../../lib/text';
-import { allUpdates, isoDay, partnersInOrder, shortNames } from '../../components/sections/data';
+import { allUpdates, partnersInOrder, shortNames } from '../../components/sections/data';
 
 const updates = await allUpdates();
 const { all } = await partnersInOrder();
@@ -35,8 +34,7 @@ const filters = all.filter((p) => p.data.page || updates.some((u) => u.data.part
         updates.map((u) => (
           <li class="up__row" data-partner={u.data.partner}>
             <p class="up__meta">
-              <time datetime={isoDay(u.data.date)}>{fmtDate(u.data.date, 'short')}</time>
-              <span> · {short(u.data.partner)}</span>
+              <span>{short(u.data.partner)}</span>
               {u.data.author && <span> · {u.data.author}</span>}
             </p>
             <h2 class="up__title">
@@ -128,11 +126,6 @@ const filters = all.filter((p) => p.data.page || updates.some((u) => u.data.part
     margin: 0;
     font-size: var(--step-0);
     color: var(--muted);
-  }
-  .up__meta time {
-    font-family: var(--font-mono);
-    font-size: 0.875em;
-    color: var(--text);
   }
   .up__title {
     font-family: var(--font-body);

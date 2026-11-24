@@ -29,7 +29,8 @@ tracking. A wrong seed makes every later frame wrong.
 ## 4. Wording on screen
 Guard, Strike, VIP drone, "flown by hand", tagged. Never attacker, defender, defence, intruder,
 target, pilot, operator, swarm. The banner names the teams and the colours; the bottom caption says
-what is happening now; nothing claims more than the ledger does.
+what is happening now; nothing claims more than the ledger does. No date anywhere in the picture:
+none in the banner, and a camera's burned-in clock is cropped or painted out (`delogo`).
 
 ## 5. Encode and check
 - STANDARDS §9 encoding; 1600 px wide; ≤ 10 MB; poster ≤ 100 KB; `public/media` total ≤ 80 MB.

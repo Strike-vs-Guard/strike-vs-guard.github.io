@@ -79,6 +79,6 @@ imageAlt: Three Starling 2 Max drones on the concrete floor of a flight cage, gr
 caption: "Three Starling 2 Max on the floor of CMU's flight cage, lights on, before a run. Photo: CMU AirLab."
 ---
 
-In October 2026 we spent several days in CMU's flight cage in Pittsburgh with three Starlings. Nobody flew them, and the safety filter stayed on the whole time. Then one of us flew the third by hand straight across the other two to see if they would keep their spacing. They did.
+We spent several days in CMU's flight cage in Pittsburgh with three Starlings. Nobody flew them, and the safety filter stayed on the whole time. Then one of us flew the third by hand straight across the other two to see if they would keep their spacing. They did.
 
 In the same visit, the NUS team strategy moved from Crazyflies to the Starlings for the first time.

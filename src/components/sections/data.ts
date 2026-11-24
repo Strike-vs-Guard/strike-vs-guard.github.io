@@ -65,8 +65,6 @@ export async function shortNames(): Promise<(id: string) => string> {
   return (id: string) => map[id] ?? id;
 }
 
-/** ISO date for <time datetime>. */
-export const isoDay = (d: Date) => d.toISOString().slice(0, 10);
 
 /** Publication status as a plain-text tag. */
 export const statusLabel: Record<string, string> = {

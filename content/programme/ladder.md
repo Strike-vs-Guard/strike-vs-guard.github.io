@@ -1,10 +1,10 @@
 ---
 # Test ladder on the Flights page: ST Engineering's six steps to the first Starling flight in Singapore.
-# Owned by ST Engineering. `state:` is the status as of the note's date; update the note when it changes.
+# Owned by ST Engineering. `state:` is the current status; update it when it changes.
 eyebrow: Test ladder
 title: Six steps before a Starling flies in Singapore
 order: 12
-note: Status as of November 2026. Each step must pass before the next one starts.
+note: Each step must pass before the next one starts.
 # The annotated photo under the ladder. `points:` are in percent of the photo from the top left
 # (placed by eye on the 1100 x 623 original); `lx`/`ly` place each label.
 image: ../partners/ST/singapore-flight-lab.jpg

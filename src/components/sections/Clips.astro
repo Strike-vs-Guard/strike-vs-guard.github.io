@@ -1,7 +1,7 @@
 ---
 /**
  * A section of clips from one content/programme/<id>.md file: eyebrow and h2 from the file's
- * `eyebrow`/`title`, the clips with their captions, the note, then the open problems (`open:`).
+ * `eyebrow`/`title`, the clips with their captions, then the note.
  * `id` names the file and is the section anchor (#flights on the Flights page, #simulation on the
  * Programme page). `body` shows the file's Markdown body under the title; `alt` uses the alternate
  * background; `aspect` sets the clip frame (default: the tall flight clips).
@@ -15,7 +15,6 @@
  */
 import { getCollection } from 'astro:content';
 import Clip from '../Clip.astro';
-import OpenList from './OpenList.astro';
 import { section } from './content';
 
 interface Props {
@@ -108,7 +107,6 @@ const gridItems = leadItem ? rest : items;
       )
     }
     {data.note && <p class="section__note">{data.note}</p>}
-    <OpenList items={data.open} label={data.openLabel} />
   </div>
 </section>
 

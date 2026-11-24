@@ -14,7 +14,7 @@ gallery:
     caption: Both paths during the eight, traced from the lab's camera. Blue is drone_1, orange is drone_2. The loops overlap because the two drones share one eight.
 ---
 
-On 16 November two Starlings flew the figure-eight that CMU's AirLab flies in Pittsburgh, in our
+Two Starlings flew the figure-eight that CMU's AirLab flies in Pittsburgh, in our
 Singapore lab and on the same software. The eight is 6 m long and tilted, the two drones fly it in
 opposite directions at 2 m/s, and so they meet head-on in the middle again and again. Nobody is on
 the sticks.

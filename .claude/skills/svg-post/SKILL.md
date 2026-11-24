@@ -36,7 +36,8 @@ Body in Markdown. First person plural ("we flew"), plain present or past tense, 
 Images: `content/updates/<partner>/images/`, relative paths, alt text always. Clips: STANDARDS §9.
 
 ## 3. Wording (STANDARDS §2)
-- Name people and dates. "Jeremy flew it on 28 October", not "the team tested it".
+- Name people; leave dates out. "Jeremy flew it", not "the team tested it". The site shows no dates
+  (STANDARDS §2): none in the title, summary, body, captions or alt text. `date:` only orders the posts.
 - Numbers with conditions. "0.081 m mean error over 3 flights, camera only".
 - No "counter-UAS", "intruder", "target", "threat", "neutralise"; no marketing adjectives.
 - Hand-flown or teleop results count only with a video the partner has watched.

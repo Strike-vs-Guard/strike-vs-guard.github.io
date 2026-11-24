@@ -40,7 +40,7 @@ people:
     bio: >-
       Guillaume Sartoretti is an Assistant Professor in Mechanical Engineering at
       NUS and leads the MARMoT Lab. He studies how cooperation emerges in large
-      groups of agents making their own choices; PhD in robotics from EPFL (2016),
+      groups of agents making their own choices; PhD in robotics from EPFL,
       then a postdoc at CMU's Robotics Institute.
     link: https://www.marmotlab.org/bio.html
   - name: Tanishq Duhan
@@ -69,8 +69,8 @@ It found plays we hadn't thought of. We can't always say why it chose one.
 
 ## What we've flown
 
-Our team strategy first flew on palm-sized Crazyflie drones. In October 2026, at
-CMU, it moved to full-size Starling 2 Max drones running AirStack.
+Our team strategy first flew on palm-sized Crazyflie drones. At CMU, it then
+moved to full-size Starling 2 Max drones running AirStack.
 
 ![The NUS team strategy flying on Crazyflie drones](./NUS/crazyflie-flight.jpg)
 
@@ -82,7 +82,7 @@ so both sides keep getting better. A separate planner flies one drone fast throu
 obstacles on routes that are hard to predict. It reaches its goal in over 99 % of runs, and flying it
 with a team comes next.
 
-The July 2026 report has the number that worries us. On SMAC, a standard three-against-three
+An earlier programme report has the number that worries us. On SMAC, a standard three-against-three
 benchmark in multi-agent research, our learned plays win close to 100 % of games when the players
 start from fixed positions. In a first, preliminary Strike vs Guard test, two Guard drones against
 one Strike drone, they held the zone in about 20 % of games. The skills fall apart in situations

@@ -14,7 +14,7 @@ gallery:
     caption: The ground station during the approach. Each drone carries a 0.9 m keep-out sphere; where the spheres meet, the filter takes over and the hand-flown drone comes no closer.
 ---
 
-On 13 November we flew a Starling by hand for the first time, with a gamepad, on the same software
+We flew a Starling by hand for the first time, with a gamepad, on the same software
 that flies the drones on their own. The fence and the safety filter stay on while a person is on the
 sticks, so a hand-flown drone is checked the same way as an autonomous one.
 
@@ -30,5 +30,5 @@ to 0.72 m. Both held their height within 6 cm.
 
 <figure class="clip"><video controls muted playsinline preload="none" poster="../../../media/st-hand-flown-vs-filter-inset.jpg" aria-label="Flight clip: a hand-flown Starling approaches a hovering one in the Singapore lab"><source src="../../../media/st-hand-flown-vs-filter-inset.mp4" type="video/mp4"></video><figcaption>The flight from the lab's camera, drones labelled, with the ground station's view inset. drone_2 is flown by hand at the hovering drone_1 three times; each time the filter holds them apart. Video: NEAR Lab, ST Engineering.</figcaption></figure>
 
-One flight each, from one direction. Next: approaches from other sides and heights, both drones
-moving, then the formations and random goals already flown at CMU.
+One flight each, from one direction. Planned after these: approaches from other sides and heights,
+both drones moving, then the formations and random goals already flown at CMU.

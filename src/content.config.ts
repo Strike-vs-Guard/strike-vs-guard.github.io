@@ -227,9 +227,6 @@ const programme = defineCollection({
         decisions: z.array(z.string()).default([]),
         /** Optional one-sentence status line, reused by other pages. */
         status: z.string().optional(),
-        /** Optional list of open problems ("what we haven't solved yet"), one line each. */
-        open: z.array(z.string()).default([]),
-        openLabel: z.string().optional(),
         /** Optional one-line note shown in the hero under the statement (home page). */
         gameNote: z.string().optional(),
         /** Optional heading and hint above the drone diagram on the Partners page (stack.md). */

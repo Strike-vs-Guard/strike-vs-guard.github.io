@@ -11,7 +11,6 @@ import { Image } from 'astro:assets';
 import LogoPair from '../../components/LogoPair.astro';
 import Base from '../../layouts/Base.astro';
 import { url } from '../../lib/url';
-import { fmtDate } from '../../lib/text';
 import PubList from '../../components/sections/PubList.astro';
 import { allUpdates, fileName, peopleGroups } from '../../components/sections/data';
 
@@ -88,7 +87,7 @@ const layerNames: Record<string, string> = {
             <div>
               <dt>Page</dt>
               <dd>
-                Maintained by {d.short} · updated {fmtDate(d.updated, 'long')} ·{' '}
+                Maintained by {d.short} ·{' '}
                 <a href={editUrl}>Edit this page</a>
               </dd>
             </div>
@@ -188,7 +187,6 @@ const layerNames: Record<string, string> = {
             <ul>
               {updates.map((u) => (
                 <li>
-                  <time datetime={u.data.date.toISOString().slice(0, 10)}>{fmtDate(u.data.date, 'short')}</time>
                   <span class="pp-updates__main">
                     <a href={url(`updates/${u.id}/`)}>{u.data.title}</a>
                     {u.data.author && <span class="muted"> · {u.data.author}</span>}
@@ -467,11 +465,5 @@ const layerNames: Record<string, string> = {
     gap: 4px 16px;
     padding: 10px 0;
     border-bottom: 1px solid var(--border);
-  }
-  .pp-updates time {
-    font: 500 var(--step--1) var(--font-mono);
-    color: var(--muted);
-    min-width: 12ch;
-    padding-top: 3px;
   }
 </style>

@@ -108,7 +108,7 @@ Three reviewers read the live test site, each through one lens. Now saved as the
 
 | Reviewer | Lens: does the site sound like people made it? |
 |---|---|
-| Editor | Names, dates, first person. Is anything claimed without a person or a number? Tidy triads, filler, self-praising adjectives ("honest") |
+| Editor | Names, first person (no dates: STANDARDS §2). Is anything claimed without a person or a number? Tidy triads, filler, self-praising adjectives ("honest") |
 | Art director | Looks machine-made: decoration without meaning (dot grids, corner marks), uniform grids, logo sizes, empty faces, captions that only label |
 | Outside professor | Cold read as a visiting researcher: what went wrong, what is open, can I tell who did the work, would I trust it |
 

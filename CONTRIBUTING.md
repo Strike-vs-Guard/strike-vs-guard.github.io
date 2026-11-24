@@ -92,7 +92,7 @@ over its limit stops the build, with a message naming the file and the field.
 | `contact` | no | public email address | `lab@example.org` |
 | `order` | yes | whole number; fixes the partner order (ST Engineering 2, NUS 3, UPenn 4, CMU 5). Do not change it | `3` |
 | `page` | no | `false` shows a card with no page (used for HTX); default `true` | `true` |
-| `updated` | yes | `YYYY-MM-DD`; change it when you edit | `2026-11-04` |
+| `updated` | yes | `YYYY-MM-DD`; change it when you edit (not shown on the site) | `2026-11-04` |
 | `people` | no | list (below) | |
 | `publications` | no | list (below) | `[]` |
 
@@ -205,7 +205,7 @@ The full post in Markdown.
 | Field | Required | Rule |
 |---|---|---|
 | `title` | yes | 100 characters |
-| `date` | yes | `YYYY-MM-DD` |
+| `date` | yes | `YYYY-MM-DD`; orders the posts, newest first, and is not shown |
 | `partner` | yes | `st`, `nus`, `upenn` or `cmu`; must match the folder, or the build stops |
 | `author` | no | The person who wrote it. Please fill it in |
 | `summary` | yes | 300 characters |
@@ -324,7 +324,7 @@ The full rules are in [STANDARDS.md §2](STANDARDS.md). The five that matter mos
    "intercept" or "swarm".
 2. **Partners are equals, in the order ST Engineering, NUS, UPenn, CMU.** ST Engineering is the
    lead partner; the others are partners. HTX is the funder, shown separately.
-3. **Name people and dates.** "Jeremy flew it on 28 October", not "the team tested it".
+3. **Name people, and leave dates out.** "Jeremy flew it", not "the team tested it". The site shows no dates: no day, month or year in your text, captions or titles (STANDARDS §2). Publications keep their venue and year.
 4. **Give one number per claim, with its conditions.** "Held the zone in about 20 % of games, two
    Guard drones against one Strike drone, preliminary test", not "promising results".
 5. **Say what did not work, and skip self-praise.** No "honest", "robust" or "seamless".
