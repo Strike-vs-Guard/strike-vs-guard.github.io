@@ -39,6 +39,13 @@ site owner driving the work is Jeremy (ST Engineering); the ST lead is William T
 ## 4. Current state
 
 **As of 24 Nov 2026 (newest first; the older notes below are history):**
+- **Partner-page People section centred (owner picked B, 24 Nov, late).** Ask: "spread out the wording and
+  the spacing … doesn't have to be all on the left". Draft `~/Downloads/svg-people-options/index.html` had A
+  (stretch columns), B (centred), C (photo beside name), D (PI row + team). Owner picked **B**: heading,
+  people and "Interns" centred, 96 px photos, cards a fifth of the row (150–216 px) so a team of five stays on one row down to
+  about 920 px wide (tablets: 4 + 1; phones: one per row). Rejected:
+  A, C, D (both reviewers had preferred A or D; the owner chose B). `src/pages/partners/[id].astro`, STANDARDS
+  partner-page People line. jeremy.md §29.
 - **White footer (owner, 24 Nov, last).** The footer is no longer a brand-blue band: it uses the page's
   colours (`--bg`, `--text`) with a hairline (`--border`) above; logos sit straight on it in light mode
   (the white plates are invisible on white) and stay white tiles in dark mode. `src/layouts/Base.astro`,

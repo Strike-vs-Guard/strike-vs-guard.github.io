@@ -281,8 +281,8 @@ partner from the person marked `lead: true` with a `bio:` (photo, name linked to
 **Partner page (`src/pages/partners/[id].astro`):**
 - Top line: "This is NUS's own file · Edit". Header and meta card; "Maintained by <Short> · updated
   <date> · Edit this page" sits in "At a glance".
-- People: a row with faces from `people:` (the lead first, tagged "PI"; the meta box says "Principal
-  investigator"). The word "Lead" is not used for people.
+- People: faces from `people:`, centred on the page (96 px photos, name and role centred under each,
+  owner 24 Nov 2026), the lead first, tagged "PI"; the meta box says "Principal investigator". The word "Lead" is not used for people.
 - "About the lab": `labBlurb:` on the left, the bios of people with `bio:` (lead first, face, role,
   "Profile →") on the right. Skipped when both are empty. Home and cards stay as they are.
 - "In the system": `DroneDiagram` in `partner` mode, with that partner's layers lit.

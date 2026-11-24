@@ -527,6 +527,15 @@ dark) with a thin grey line above it, and the colour logos sit straight on it wi
 mode they stay white tiles. The grey line he asked about is that divider between the last section and
 the footer, which used to be hidden by the blue band.
 
+## 29. People section centred on partner pages (24 November 2026)
+> Can you spread out the wording and the spacing for the "people" section in each of the partner's
+> pages? It doesn't have to be all on the left-hand side. … Go with B.
+
+A draft with four layouts went to him (A stretch the columns, B centred, C photo beside the name, D the PI
+on a row of their own). Two reviewers preferred A or D and both advised against B (the only centred block on
+a left-aligned site); he chose B. Built with slightly narrower cards than the draft so a five-person team
+fits on one row on laptops and desktops instead of leaving one person alone underneath.
+
 ---
 
 ## Review links (private claude.ai pages, owner: Jeremy)

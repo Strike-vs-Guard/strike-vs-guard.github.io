@@ -108,7 +108,7 @@ const layerNames: Record<string, string> = {
                   {row.map((m) => (
                     <li class="pp-person">
                       {m.photo ? (
-                        <Image class="pp-person__face" src={m.photo} alt={m.name} width={72} height={72} densities={[1, 2]} />
+                        <Image class="pp-person__face" src={m.photo} alt={m.name} width={96} height={96} densities={[1, 2]} />
                       ) : (
                         <span class="pp-person__face pp-person__initials" aria-hidden="true">
                           {initials(m.name)}
@@ -287,34 +287,46 @@ const layerNames: Record<string, string> = {
     padding-block: clamp(32px, 4vw, 48px);
     border-bottom: 1px solid var(--border);
   }
+  /* People: centred on the page, larger photos, names and roles centred under them (owner's pick B, 24 Nov 2026). */
   .pp-people h2 {
-    margin: 0 0 20px;
+    margin: 0 0 24px;
+    text-align: center;
   }
   .pp-people__row {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 28px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 36px 24px;
   }
   .pp-person {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     gap: 4px;
+    /* a fifth of the row, 150–216 px, so a team of five stays on one row down to about 920 px wide */
+    flex: 0 0 clamp(150px, calc((100% - 4 * 24px) / 5), 216px);
     min-width: 0;
   }
+  @media (max-width: 560px) {
+    .pp-person {
+      flex-basis: 220px; /* phones: one person per row */
+    }
+  }
   .pp-people__group {
-    margin: 32px 0 16px;
+    margin: 36px 0 20px;
+    text-align: center;
     font-size: var(--step-0);
     font-weight: 600;
     color: var(--muted);
   }
   .pp-person :global(.pp-person__face) {
     flex: none;
-    width: 72px;
-    height: 72px;
+    width: 96px;
+    height: 96px;
     aspect-ratio: 1;
     border-radius: 50%;
     object-fit: cover;
