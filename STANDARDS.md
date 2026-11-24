@@ -249,7 +249,7 @@ On phones the panel opens full width under the header.
 | 1 | Hero | Title, then the button row ("Watch the film" first, then Latest updates and Meet the partners), above a rounded 16:9 panel: a silent loop cut from the programme film, a pause button, and "Watch the film", which plays the film with sound in the same panel (Close button and Escape lead back). Poster: the film's title frame; reduced motion shows the poster. See §9 "Home hero" |
 | 1a | How it works | Two explainer films side by side, straight after the hero (§9 "Explainer films") |
 | 2 | Logo row | ST, NUS, UPenn, CMU, then "Funded by HTX" |
-| 3 | At a glance + Latest | "Milestones" rows from `glance.md` (grouped by `state:`) beside a rail of the 5 latest posts |
+| 3 | At a glance + Latest | "Milestones" rows from `glance.md` (grouped by `state:`) beside a rail of the 5 latest posts (title and summary only: no date, partner or author line) |
 | 4 | Partner cards | "Partner page →" and, when the partner has posted, "Latest update →" (a link to that post, no date) |
 | 5 | Research themes | Five rows from `themes.md` |
 | 6 | Interactive drone | Full explain mode, partner names in the callouts (effects below) |

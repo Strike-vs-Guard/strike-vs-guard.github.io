@@ -4,18 +4,17 @@
  * At a glance: programme, funder, partners with one-line roles, and "Milestones" from
  * content/programme/glance.md (or status.md). No timeline and no "next milestone" rows (STANDARDS §2):
  * one item per line, grouped by `state:` (Done, In progress, Not yet); no "as of" line.
- * Latest: the five newest posts (partner, author, title, summary), newest first, with no dates shown.
+ * Latest: the five newest posts (title and summary only), newest first; no date, partner or author line.
  */
 import { getEntry } from 'astro:content';
 import { url } from '../../lib/url';
 import { section } from './content';
-import { allUpdates, lowerFirst, optionalSection, partnersInOrder, shortNames } from './data';
+import { allUpdates, lowerFirst, optionalSection, partnersInOrder } from './data';
 
 const site = (await getEntry('site', 'main'))!.data;
 const overview = await section('overview');
 const { partners, funder } = await partnersInOrder();
 const latest = (await allUpdates()).slice(0, 5);
-const short = await shortNames();
 
 const status = (await optionalSection('glance')) ?? (await optionalSection('status'));
 const order = ['Done', 'In progress', 'Not yet'];
@@ -89,10 +88,6 @@ const groups = status
         {
           latest.map((u) => (
             <li>
-              <p class="rail__meta">
-                {short(u.data.partner)}
-                {u.data.author && ` · ${u.data.author}`}
-              </p>
               <h3 class="rail__title">
                 <a href={url(`updates/${u.id}/`)}>{u.data.title}</a>
               </h3>
@@ -186,11 +181,6 @@ const groups = status
   }
   .rail li:last-child {
     border-bottom: 1px solid var(--border);
-  }
-  .rail__meta {
-    font-size: var(--step--1);
-    color: var(--muted);
-    margin: 0;
   }
   .rail__title {
     font-family: var(--font-body);
