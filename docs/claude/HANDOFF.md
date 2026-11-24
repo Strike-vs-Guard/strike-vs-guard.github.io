@@ -39,6 +39,9 @@ site owner driving the work is Jeremy (ST Engineering); the ST lead is William T
 ## 4. Current state
 
 **As of 24 Nov 2026 (newest first; the older notes below are history):**
+- **LIVE 25 Nov 2026 (owner: "push to main"):** PR #15 merged (69f5746): no timeline, no dates, "Milestones",
+  open-problem lists removed, trimmed Latest list, no GitHub footer link, white footer, centred People.
+  Live site checked after the deploy.
 - **Partner-page People section centred (owner picked B, 24 Nov, late).** Ask: "spread out the wording and
   the spacing … doesn't have to be all on the left". Draft `~/Downloads/svg-people-options/index.html` had A
   (stretch columns), B (centred), C (photo beside name), D (PI row + team). Owner picked **B**: heading,
@@ -49,7 +52,7 @@ site owner driving the work is Jeremy (ST Engineering); the ST lead is William T
 - **White footer (owner, 24 Nov, last).** The footer is no longer a brand-blue band: it uses the page's
   colours (`--bg`, `--text`) with a hairline (`--border`) above; logos sit straight on it in light mode
   (the white plates are invisible on white) and stay white tiles in dark mode. `src/layouts/Base.astro`,
-  STANDARDS (`--band` row, logos bullet, page-structure row 9). Rides in PR #15. jeremy.md §28.
+  STANDARDS (`--band` row, logos bullet, page-structure row 9). Live 25 Nov (PR #15). jeremy.md §28.
 - **No dates on the site at all (owner, 24 Nov, later the same day).** Page text, captions, alt text,
   post titles and listings carry no day, month or year; templates print no post date, no "updated"
   date and no "as of"; the footer has no year. Clip banners carry no date (`st-fig8-two-starlings`,
