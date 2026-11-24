@@ -8,7 +8,7 @@ title: Who builds which part
 order: 4
 image: ./images/team-flight-cage.jpg
 imageAlt: The Strike vs Guard team standing in the CMU flight cage, holding Starling drones
-caption: "In CMU's flight cage, October 2026. Left to right: Tanishq Duhan (NUS), Wei Wang (UPenn), Billy Zheng (UPenn), Prof Sebastian Scherer (CMU), Yikuan Fang (CMU), Prof Guillaume Sartoretti (NUS), Jeric Lew (NUS), Jeremy Chia Hwe Huang (ST Engineering), William Teo (ST Engineering), Chen Jiaying (ST Engineering). Not in the photo: Prof Rahul Mangharam (UPenn)."
+caption: "In CMU's flight cage. Left to right: Tanishq Duhan (NUS), Wei Wang (UPenn), Billy Zheng (UPenn), Prof Sebastian Scherer (CMU), Yikuan Fang (CMU), Prof Guillaume Sartoretti (NUS), Jeric Lew (NUS), Jeremy Chia Hwe Huang (ST Engineering), William Teo (ST Engineering), Chen Jiaying (ST Engineering). Not in the photo: Prof Rahul Mangharam (UPenn)."
 # Heading and hint above the drone diagram on the Partners page.
 droneTitle: What each layer does
 droneHint: Select a layer to see who works on it.

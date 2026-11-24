@@ -66,9 +66,9 @@ fair comparison possible.
   don't collide, whatever the strategy above it decides.
 - **Flight testing.** Multi-drone flights in our indoor flight cage in Pittsburgh.
 
-## October in the cage
+## In the cage
 
-In October 2026 three Starling 2 Max drones flew in our flight cage with no pilot.
+When the partner teams visited us, three Starling 2 Max drones flew in our flight cage with no pilot.
 They changed formation and kept their spacing. They flew to separate goals across
 each other's paths. They kept going while a hand-flown drone cut across them, and a
 virtual boundary kept every one of them inside the flight area.
@@ -91,7 +91,7 @@ Starlings on AirStack: the programme's first successful run on full-size drones.
 AirStack runs real and simulated drones side by side under the same safety filter, so we try new
 ideas on simulated Starlings first.
 
-From the July 2026 report: the safety filter works on velocity commands. We tested it first in a
+From an earlier programme report: the safety filter works on velocity commands. We tested it first in a
 point-mass simulation across drone sizes, safety distances, numbers of drones and speeds, then in the
 AirStack simulator with a two-drone close-proximity test and a five-drone mission. AirStack can use
 two simulators. AirSim starts in 6.75 s and Isaac Sim in 70.5 s, so we iterate in AirSim and keep

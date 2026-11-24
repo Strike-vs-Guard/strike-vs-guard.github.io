@@ -488,6 +488,54 @@ whole tile big and white everywhere, so each logo is now drawn at build time ont
 around a logo. Plates are drawn wider than 64 px, because Chromium's forced dark may invert smaller
 images (the NEAR Lab, xLab and Penn marks did in the stand-in).
 
+## 26. No programme timeline (24 November 2026)
+> Can you remove any mention of timeline, regarding year 1 to 2 or whatever. Show me what you intend
+> to remove first. … I need to remove items 1 to 4, but keep the framing for larger teams, flying
+> beyond the lab and whatever content: put that as future work / work in progress.
+
+Shown first, then done: the "A three-year programme" timeline on Flights (Year 1/2/3, year ranges,
+"We are here", the March 2027 target) became "What's next": three cards with a "Work in progress" or
+"Future work" chip and no dates. The Timeline and Next milestone rows left "At a glance"; the
+programme start and end left `site.yml`; the localisation plan's dated table became an ordered list
+and two sentences lost their dates. Kept: dates of flights, posts, "as of" notes, publication years
+and an intern's dates. Two reviewer agents checked it before the push (nothing left on any built page;
+wording claims no more than before; schema comments and the handoff tidied from their findings).
+
+## 27. "Milestones", no open-problem lists, no dates (24 November 2026)
+> Can you change "Status today" to "Milestones". Remove the section "What we haven't solved yet" in
+> the research page. I think you can remove all date references throughout the webpage. … Just
+> remove the date for "EPFL", that is OK. … Conference name can keep as IROS 2026.
+
+"At a glance" now says "Milestones". The two "What we haven't solved yet" lists (Simulation,
+Localisation) are gone from Research. Every date a visitor could read is gone: page text and
+captions (an agent reworded 18 content files), post dates on every listing and post page, "updated"
+and "as of" lines, the footer's year, the dates in two clip banners, and the camera clock in one clip
+and two lab photos. Kept: publication venue and year, "IROS 2026" as a conference's name, post
+`date:` and partner `updated:` for ordering, dated addresses, and the small clock inside CMU's own
+recordings. Two reviewer agents checked it. The second found that some sentences, once undated, read
+as standing claims or current plans ("have flown", "Next come both drones moving"); those were
+reworded so each past flight reads as one past flight.
+
+## 28. White footer (24 November 2026)
+> For the bottom of the icons can you remove the white background? … Can you do a draft where the
+> logos are just directly on the footer? … Can you try the white footer with the logos? … I think we
+> try the white footer on the page, build the website.
+
+Drafts in `~/Downloads/svg-footer-options/` (colour logos on blue, white logos on blue, white footer).
+He chose the white footer: the footer now uses the page's own colours (white in light mode, navy in
+dark) with a thin grey line above it, and the colour logos sit straight on it with no tiles. In dark
+mode they stay white tiles. The grey line he asked about is that divider between the last section and
+the footer, which used to be hidden by the blue band.
+
+## 29. People section centred on partner pages (24 November 2026)
+> Can you spread out the wording and the spacing for the "people" section in each of the partner's
+> pages? It doesn't have to be all on the left-hand side. … Go with B.
+
+A draft with four layouts went to him (A stretch the columns, B centred, C photo beside the name, D the PI
+on a row of their own). Two reviewers preferred A or D and both advised against B (the only centred block on
+a left-aligned site); he chose B. Built with slightly narrower cards than the draft so a five-person team
+fits on one row on laptops and desktops instead of leaving one person alone underneath.
+
 ---
 
 ## Review links (private claude.ai pages, owner: Jeremy)

@@ -1,0 +1,71 @@
+---
+/**
+ * What's next (content/programme/next.md): what is in progress and what is future work, as three
+ * cards with a status chip each. No dates and no order in time: this replaced the three-year
+ * timeline on 24 Nov 2026 (STANDARDS §2).
+ * `id` defaults to "next"; pass id="" where a second copy appears so the anchor stays unique.
+ */
+import { section } from './content';
+
+interface Props {
+  id?: string;
+  alt?: boolean;
+}
+const { id = 'next', alt = true } = Astro.props;
+const next = await section('next');
+---
+
+<section id={id || undefined} class:list={['section', { 'section--alt': alt }]}>
+  <div class="wrap">
+    <header class="section__head">
+      <p class="eyebrow">{next.eyebrow}</p>
+      <h2>{next.title}</h2>
+      <div class="prose"><next.Content /></div>
+    </header>
+    <ul class="wn">
+      {
+        next.items.map((m) => (
+          <li class="wn__item">
+            {m.state && <span class:list={['chip', 'wn__state', { 'is-now': /progress/i.test(m.state) }]}>{m.state}</span>}
+            <h3>{m.title}</h3>
+            <p class="muted">{m.text}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  .wn {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 28px;
+  }
+  .wn__item {
+    padding-top: 20px;
+    border-top: 2px solid var(--border);
+  }
+  .wn__state {
+    margin-bottom: 12px;
+  }
+  /* the one in progress: the chip in the text colour, as "Done" is on the test ladder */
+  .wn__state.is-now {
+    color: var(--text);
+    border-color: var(--text);
+  }
+  .wn h3 {
+    margin-bottom: 6px;
+  }
+  .wn .muted {
+    margin: 0;
+  }
+  @media (min-width: 860px) {
+    .wn {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+  }
+</style>

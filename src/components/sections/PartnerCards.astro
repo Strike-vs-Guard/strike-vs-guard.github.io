@@ -2,15 +2,14 @@
 /**
  * Partner cards (v2), in `order:` (ST Engineering, NUS, UPenn, CMU), then the funder line. Holds #partners
  * and #funder. Each card: the institution and lab logos as one white tile (LogoPair; invisible on the white page in light), name, lab (and "lead partner"),
- * lead, the one-line `contribution`, "Partner page →" and "Latest update · <date>" when the partner has
+ * lead, the one-line `contribution`, "Partner page →" and "Latest update →" (a link to the newest post, no date) when the partner has
  * posted (from content/updates/); nothing when it hasn't. `heading` adds a section heading (home page); without it the card
  * names are h2 (Partners page, under its own page head).
  */
 import LogoPair from '../LogoPair.astro';
 import { widePlate } from '../../lib/logo';
 import { url } from '../../lib/url';
-import { fmtDate } from '../../lib/text';
-import { allUpdates, isoDay, leadLine, partnersInOrder } from './data';
+import { allUpdates, leadLine, partnersInOrder } from './data';
 
 interface Props {
   heading?: string;
@@ -20,7 +19,7 @@ interface Props {
 const { heading, funderLine = true } = Astro.props;
 const { partners, funder } = await partnersInOrder();
 const updates = await allUpdates();
-const lastPost = (id: string) => updates.find((u) => u.data.partner === id)?.data.date;
+const lastPost = (id: string) => updates.find((u) => u.data.partner === id);
 const H = heading ? 'h3' : 'h2';
 ---
 
@@ -56,9 +55,9 @@ const H = heading ? 'h3' : 'h2';
                   </a>
                 )}
                 {last && (
-                  <span class="muted">
-                    Latest update · <time class="pc__date" datetime={isoDay(last)}>{fmtDate(last, 'short')}</time>
-                  </span>
+                  <a href={url(`updates/${last.id}/`)}>
+                    Latest update<span class="visually-hidden">: {last.data.title}</span>{' '}→
+                  </a>
                 )}
               </div>
             </li>
@@ -143,10 +142,6 @@ const H = heading ? 'h3' : 'h2';
   .pc__links a:hover,
   .pc__links a:focus-visible {
     text-decoration: underline;
-  }
-  .pc__date {
-    font-family: var(--font-mono);
-    font-size: 0.875em;
   }
   .pc__funder {
     display: flex;

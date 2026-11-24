@@ -1,31 +1,20 @@
 ---
 /**
  * Home, screen 2 (holds #updates): "At a glance" beside the "Latest" rail.
- * At a glance: programme, funder, partners with one-line roles, timeline (site.yml `start`/`end`, the
- * current milestone year), the next milestone (the "Target:" sentence of the current year in
- * milestones.md, labelled a target), and status today from content/programme/glance.md (or status.md):
- * one item per line, grouped by `state:` (Done, In progress, Not yet); its `note:` is the "as of" line.
- * Latest: the five newest posts (date, partner, author, title, summary).
+ * At a glance: programme, funder, partners with one-line roles, and "Milestones" from
+ * content/programme/glance.md (or status.md). No timeline and no "next milestone" rows (STANDARDS §2):
+ * one item per line, grouped by `state:` (Done, In progress, Not yet); no "as of" line.
+ * Latest: the five newest posts (title and summary only), newest first; no date, partner or author line.
  */
 import { getEntry } from 'astro:content';
 import { url } from '../../lib/url';
-import { fmtDate } from '../../lib/text';
 import { section } from './content';
-import { allUpdates, isoDay, lowerFirst, optionalSection, partnersInOrder, shortNames, upperFirst } from './data';
+import { allUpdates, lowerFirst, optionalSection, partnersInOrder } from './data';
 
 const site = (await getEntry('site', 'main'))!.data;
 const overview = await section('overview');
-const milestones = await section('milestones');
 const { partners, funder } = await partnersInOrder();
 const latest = (await allUpdates()).slice(0, 5);
-const short = await shortNames();
-
-const years = milestones.items;
-const currentIdx = years.findIndex((m) => m.current);
-const current = years[currentIdx];
-/* The current year's "Target: …" sentence; else the next year's title. */
-const target = current?.text?.match(/Target:\s*([^]+?)\.?\s*$/)?.[1];
-const next = target ? upperFirst(target) : years[currentIdx + 1]?.title;
 
 const status = (await optionalSection('glance')) ?? (await optionalSection('status'));
 const order = ['Done', 'In progress', 'Not yet'];
@@ -70,34 +59,11 @@ const groups = status
           </dd>
         </div>
         {
-          (site.start || current) && (
-            <div>
-              <dt>Timeline</dt>
-              <dd>
-                {site.start && site.end && <span class="gl__mono">{site.start} – {site.end}</span>}
-                {site.start && site.end && current && ', '}
-                {current?.label && `${current.label} of ${years.length}`}
-              </dd>
-            </div>
-          )
-        }
-        {
-          next && (
-            <div>
-              <dt>Next milestone</dt>
-              <dd>
-                {next} <span class="muted">(target)</span>
-              </dd>
-            </div>
-          )
-        }
-        {
-          /* TODO: status today needs content/programme/glance.md (or status.md): items with `state:` Done / In progress / Not yet. */
+          /* "Milestones": content/programme/glance.md (or status.md), items with `state:` Done / In progress / Not yet. No "as of" date (STANDARDS §2). */
           groups.length > 0 && (
             <div>
               <dt>
-                Status today
-                {status?.note && <span class="gl__asof">{status.note}</span>}
+                Milestones
               </dt>
               <dd>
                 {groups.map((g) => (
@@ -122,10 +88,6 @@ const groups = status
         {
           latest.map((u) => (
             <li>
-              <p class="rail__meta">
-                <time datetime={isoDay(u.data.date)}>{fmtDate(u.data.date, 'short')}</time> · {short(u.data.partner)}
-                {u.data.author && ` · ${u.data.author}`}
-              </p>
               <h3 class="rail__title">
                 <a href={url(`updates/${u.id}/`)}>{u.data.title}</a>
               </h3>
@@ -183,15 +145,6 @@ const groups = status
     font-weight: 600;
   }
   .gl__mono,
-  .gl__asof {
-    font-family: var(--font-mono);
-    font-size: 0.875em;
-  }
-  .gl__asof {
-    display: block;
-    font-weight: 400;
-    color: var(--muted);
-  }
   .gl__grp + .gl__grp {
     margin-top: 10px;
   }
@@ -228,15 +181,6 @@ const groups = status
   }
   .rail li:last-child {
     border-bottom: 1px solid var(--border);
-  }
-  .rail__meta {
-    font-size: var(--step--1);
-    color: var(--muted);
-    margin: 0;
-  }
-  .rail__meta time {
-    font-family: var(--font-mono);
-    color: var(--text);
   }
   .rail__title {
     font-family: var(--font-body);

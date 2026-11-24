@@ -38,7 +38,33 @@ site owner driving the work is Jeremy (ST Engineering); the ST lead is William T
 
 ## 4. Current state
 
-**As of 18 Nov 2026 (newest first; the older notes below are history):**
+**As of 24 Nov 2026 (newest first; the older notes below are history):**
+- **Partner-page People section centred (owner picked B, 24 Nov, late).** Ask: "spread out the wording and
+  the spacing … doesn't have to be all on the left". Draft `~/Downloads/svg-people-options/index.html` had A
+  (stretch columns), B (centred), C (photo beside name), D (PI row + team). Owner picked **B**: heading,
+  people and "Interns" centred, 96 px photos, cards a fifth of the row (150–216 px) so a team of five stays on one row down to
+  about 920 px wide (tablets: 4 + 1; phones: one per row). Rejected:
+  A, C, D (both reviewers had preferred A or D; the owner chose B). `src/pages/partners/[id].astro`, STANDARDS
+  partner-page People line. jeremy.md §29.
+- **White footer (owner, 24 Nov, last).** The footer is no longer a brand-blue band: it uses the page's
+  colours (`--bg`, `--text`) with a hairline (`--border`) above; logos sit straight on it in light mode
+  (the white plates are invisible on white) and stay white tiles in dark mode. `src/layouts/Base.astro`,
+  STANDARDS (`--band` row, logos bullet, page-structure row 9). Rides in PR #15. jeremy.md §28.
+- **No dates on the site at all (owner, 24 Nov, later the same day).** Page text, captions, alt text,
+  post titles and listings carry no day, month or year; templates print no post date, no "updated"
+  date and no "as of"; the footer has no year. Clip banners carry no date (`st-fig8-two-starlings`,
+  `st-cf-game`), and the camera's clock is painted out of `st-hand-flown-vs-filter-inset.mp4` and two
+  lab photos (`delogo` / OpenCV inpaint). Kept: publication `venue:`/`year:`, conference names with
+  their year ("IROS 2026"), post `date:` and partner `updated:` (ordering only), dated addresses, and
+  the small clock inside CMU's own recordings (`starling-cmu.mp4`, `content/partners/CMU/
+  starling-flight-cage.jpg`, CMU's Flights clips). Rule: STANDARDS §2.
+- **"At a glance" says "Milestones"** (was "Status today"); the "What we haven't solved yet" lists
+  are gone from Research (`OpenList.astro` deleted, `open:`/`openLabel:` out of the schema).
+- **No programme timeline on the site (owner, 24 Nov).** The three-year timeline on Flights is now
+  "What's next" (`content/programme/next.md`, `WhatsNext.astro`): three cards with a "Work in
+  progress" or "Future work" chip and no dates. "At a glance" lost its Timeline and Next milestone
+  rows; `site.yml` lost `start`/`end`; the localisation plan is an ordered list without dates.
+  Rule in STANDARDS §2. Dates of things that have happened stay.
 - **Home hero = the programme film.** Silent teaser loop + "Watch the film · 1:41" (film with sound in
   the same panel). Files `public/media/hero-film-teaser.mp4`, `svg-film.mp4`, poster
   `content/programme/images/hero-film-title.jpg`; fields `video:`, `film:`, `filmLabel:`,
@@ -122,7 +148,7 @@ public `svg-website` repo (with consent, credit "Photo/Video: CMU AirLab"; that 
 director, outside professor) said the site read as machine-written. Changes: `people:` per partner
 (row with faces; team photo caption names everyone); slogans rewritten (hero title unchanged); partner
 pages in first person; `open:`/`openLabel:` ("What we haven't solved yet") on Localisation, Simulation
-and Flights; updates as a dated log with `author:`; footer note "Four labs, in Singapore, Pittsburgh
+and Flights (removed 24 Nov 2026); updates as a dated log with `author:` (dates no longer shown); footer note "Four labs, in Singapore, Pittsburgh
 and Philadelphia. Funded by HTX."; directions as a plain numbered list; drone drawing without dot grid
 or corner marks; Flights = lead clip + grid with stamps and "watch" cues + annotated lab photo; logos
 sized by visual weight (`src/lib/logo.ts`). Voice rules: STANDARDS §2. Panel brief:
@@ -139,7 +165,7 @@ Kxx7DfmQ51Hv3EoeFyBgFj). Spec: `docs/superpowers/specs/2026-11-03-v3-redesign-de
 | Pages | Research replaces Programme (`/programme/` redirects); new Publications and Contribute; Partners keeps only the connection diagram |
 | Home | Hero (title above a 2:1 clip panel), logo row, glance + latest (the only updates list on home; the strip was removed 5 Nov), partner cards, five themes, interactive drone, flights, publications, people |
 | Drone | Effects list in STANDARDS §5; ring drift only while Safety is lit; no count-ins or scan sweeps |
-| Content model | `content/updates/<partner>/` with `gallery:` and `link:`; `publications:` per partner; `glance.md`; `themes.md`; site `start`/`end` (June 2026 – June 2029) |
+| Content model | `content/updates/<partner>/` with `gallery:` and `link:`; `publications:` per partner; `glance.md`; `themes.md`; site `start`/`end` (removed 24 Nov 2026 with every other programme timeline) |
 | Content added | People photos for all partners; IROS 2026 posts and posters; UPenn STL-SVPIO paper; A0 poster (top half only); ladder M6 done |
 
 **Earlier work, already live or on `development`:**

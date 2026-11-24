@@ -2,18 +2,15 @@
 /**
  * Publications, by partner in partner order: each partner's `publications:` (content/partners/<NAME>.md)
  * with title, authors, venue, year, status as plain text, links and the image when there is one.
- * A partner with none shows "None yet (as of <build date>)".
+ * A partner with none shows "None yet."
  */
 import Base from '../layouts/Base.astro';
 import PageHead from '../components/sections/PageHead.astro';
 import PubList from '../components/sections/PubList.astro';
 import { url } from '../lib/url';
-import { fmtDate } from '../lib/text';
 import { partnersInOrder } from '../components/sections/data';
 
 const { partners } = await partnersInOrder();
-const today = new Date();
-const asOf = fmtDate(today, 'short');
 ---
 
 <Base title="Publications" description="Papers and posters from the Strike vs Guard partner labs, by partner.">
@@ -31,7 +28,7 @@ const asOf = fmtDate(today, 'short');
               <PubList pubs={list.map((pub) => ({ pub }))} images />
             ) : (
               <p class="pubs__none">
-                None yet (as of <time datetime={today.toISOString().slice(0, 10)}>{asOf}</time>).
+                None yet.
               </p>
             )}
           </section>
@@ -65,9 +62,5 @@ const asOf = fmtDate(today, 'short');
     font-size: var(--step-1);
     color: var(--muted);
     margin: 0;
-  }
-  .pubs__none time {
-    font-family: var(--font-mono);
-    font-size: 0.875em;
   }
 </style>

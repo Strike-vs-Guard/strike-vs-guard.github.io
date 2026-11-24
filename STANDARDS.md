@@ -33,6 +33,16 @@ Precedence: the site owner's explicit instruction, then this file, then personal
 
 - It is a lab website: plain present tense and short sentences. No marketing language, and no
   mission or defence framing.
+- **No dates on the site (owner, 24 Nov 2026).** No programme timeline ("Year 1/2/3", start or end
+  dates, target dates, "next milestone"), and no dates of things that have happened either: no day,
+  month or year in page text, captions, alt text, post titles or listings, no "as of …", no "the July
+  report". Say what is **work in progress** and what is **future work** (`content/programme/next.md`,
+  "What's next" on Flights; the localisation plan is an ordered list), and tell past flights without
+  saying when. A conference keeps its name, year included ("IROS 2026"), in prose, titles and photos (owner). Pictures and clips carry no date
+  either: no date in a clip's banner, and a camera's burned-in clock is cropped or painted out.
+  **Kept:** publication entries (`venue:`, `year:`: a citation needs them); a post's `date:` and a
+  partner's `updated:`, which order the pages and are never shown; dated file names and addresses;
+  the tiny status-bar clock inside CMU's own clips (their overlay stays, §9).
 - **Never frame it as counter-UAS, counter-drone or defence.**
 - **One exception, by the site owner (18 Nov 2026): the programme film** behind "Watch the film" on the
   home page (`public/media/svg-film.mp4`, built in ST Engineering's demo project as `hero_v3_cuav.mp4`).
@@ -47,9 +57,9 @@ Precedence: the site owner's explicit instruction, then this file, then personal
 | Rule | In practice |
 |---|---|
 | A partner speaks as "we" | Partner pages are first person plural, with the partner's own headings |
-| Name people and dates | "Jeremy flew it on 28 October", not "the team tested it" |
+| Name people, not dates | "Jeremy flew it", not "the team tested it"; no dates (rule above) |
 | One number per claim | Give the number that matters; put the rest in the report |
-| Say what didn't work | Localisation and simulation end with what is still open (`open:`); Flights has none (owner, 4 Nov 2026) |
+| Say what didn't work | In the text itself, where it belongs. The "What we haven't solved yet" lists on Research were removed (owner, 24 Nov 2026) |
 | No self-praising adjectives | No "honest", "robust", "seamless" |
 | Avoid triads | Not three tidy items by habit; use two, or four, or one |
 | Clips carry a cue | The caption says what to look at: "Watch the gaps between the drones…" |
@@ -93,7 +103,7 @@ sets `data-theme` before first paint (no flash). If CMU's video overlay is kept,
 | brand red | #B3122E | #FF5A6E | **type, rules and bands only**: wordmark, one rule under the hero title, the "We are here" marker |
 | brand blue | #1A3E62 | #1A3E62 | bands and links only |
 | `--link` | #1A3E62 | `--text` | brand blue as link text in light; plain text colour in dark (guard blue stays in game figures) |
-| `--band` / `--band-text` / `--band-muted` / `--band-accent` | #1A3E62 / #E8EDF2 / #B4C2D0 / #FF8A98 | same | bands that stay dark in both themes: footer, partner-page file line (text 9.3:1, muted 6.1:1, accent 4.9:1) |
+| `--band` / `--band-text` / `--band-muted` / `--band-accent` | #1A3E62 / #E8EDF2 / #B4C2D0 / #FF8A98 | same | bands that stay dark in both themes (text 9.3:1, muted 6.1:1, accent 4.9:1). Not the footer: since 24 Nov 2026 it uses the page's colours (white in light, navy in dark) with a hairline above |
 | `--media` | #0B1622 | #0B1622 | behind and over video only: hero panel, play-button discs |
 | `--strike` | #D9542C | #F2766A | **only** the Strike team inside game figures |
 | `--guard` | #2D6FD0 | #6FA3F5 | **only** the Guard team inside game figures |
@@ -145,7 +155,8 @@ Section padding is 96 to 112 px. Corners are 3 px. Rules, not boxed cards. Text 
 - Logos are shown **in colour**, each on a white plate image (3 px corners) of the same size in both
   themes: 2:1 for a single logo (home row, footer, "Funded by" HTX), 3:1 for institution + lab with a
   hairline between them, and a square chip in the Partners menu. On the white page in light mode the
-  tile cannot be seen; on tinted bands, in dark mode and on the dark footer band it is a white tile
+  tile cannot be seen (the footer included, which is white in light mode); on tinted bands and in dark
+  mode it is a white tile
   (see "Phones"). (6 Nov 2026; greyscale-until-hover withdrawn 3 Nov.)
 - **Logo sizing is by visual weight**, baked into the plates (`RECIPE` in `src/lib/logo.ts`): height =
   a × plate height × 1/√(width ÷ height), 10 % less for square solid-colour tiles, capped in height and
@@ -169,7 +180,7 @@ Everything editable is Markdown or YAML under `content/`. **Templates never hold
 | A partner's square emblem for the Partners menu chip: optional `logoMark:` (falls back to `logo:`) | `content/partners/<NAME>.md` + `content/partners/<NAME>/mark.png` | That partner |
 | Funder card | `content/partners/HTX.md` | ST Engineering |
 | Research page and home sections | `content/programme/*.md` (one file per section, `order:` sets position) | ST Engineering (+ co-owners in CODEOWNERS) |
-| Home "At a glance" status lines: `items:` with `state:` (Done, In progress, Not yet) and the "as of" `note:` | `content/programme/glance.md` | ST Engineering |
+| Home "At a glance", the "Milestones" rows: `items:` with `state:` (Done, In progress, Not yet); no "as of" note | `content/programme/glance.md` | ST Engineering |
 | Home "Research themes" (five rows: `icon:` is the theme id, `state:`, `partners:`) | `content/programme/themes.md` | ST Engineering |
 | Publications of a partner: `publications:` (`title`, `authors`, `venue`, `year`, `status` = published / accepted / preprint / workshop, optional `link`, `pdf`, `image`) | `content/partners/<NAME>.md` | That partner |
 | Top of the home page, incl. the `decisions:` list ("What they decide"), the hero `video:` (silent loop), `film:` + `filmLabel:` (the programme film behind the button) and `videoLabel:`, the one-line `gameNote:` and the Research page head (`pageEyebrow:`, `pageTitle:`) | `content/programme/overview.md` | ST Engineering |
@@ -181,11 +192,11 @@ Everything editable is Markdown or YAML under `content/`. **Templates never hold
 | Layers of the system (drone diagram and connection diagram) | `content/programme/stack.md` (`icon:` is the layer id) | ST Engineering |
 | People on a partner's team: `people:` (name, role, photo, `lead`), a row with faces on the partner page and the people row on home; photos for every partner come from the lab's profile pictures | `content/partners/<NAME>.md`, photos in `content/partners/<NAME>/people/` (400 px square, 80 KB or less) | That partner |
 | "About the lab" on the partner page: `labBlurb:` (three sentences in "we" voice, 420 characters or fewer: who you are, what you work on, your part in the programme) and `bio:` on a person (two sentences, third person, 300 or fewer: title, lab, research, degree; no awards) with an optional profile `link:`. Facts come from the lab's own website; a partner approves its own text | `content/partners/<NAME>.md` | That partner (drafted by ST Engineering) |
-| Open problems: `open:` list and `openLabel:` ("What we haven't solved yet"), one line each | `localisation.md`, `simulation.md` | ST Engineering |
 | Page head overrides: `pageEyebrow:` / `pageTitle:` (when the section also heads its own page) | `overview.md`, `flights.md` | ST Engineering |
-| Clips: `video:` + `poster:` on an item; a hero `video:` on a section; optional second take `videoAlt:` + `posterAlt:` with `altLabel:` (the toggle text, e.g. "Lights off") and a `credit:` line; `current: true` marks the active milestone | `content/programme/*.md`, files in `public/media/` | ST Engineering; CMU for its clips |
-| News, a dated log, **one folder per partner**; `author:` names who wrote it, `draft: true` hides it; optional `gallery:` (photos with `alt:` and `caption:`) and `link:` / `linkLabel:` (paper, poster, code) | `content/updates/<partner>/YYYY-MM-DD-slug.md` (`st`, `nus`, `upenn`, `cmu`), images in `content/updates/<partner>/images/` | That partner |
-| Site title, footer, programme `start:` / `end:` (June 2026 – June 2029, "Year 1 of 3") | `content/site.yml` | ST Engineering |
+| Clips: `video:` + `poster:` on an item; a hero `video:` on a section; optional second take `videoAlt:` + `posterAlt:` with `altLabel:` (the toggle text, e.g. "Lights off") and a `credit:` line | `content/programme/*.md`, files in `public/media/` | ST Engineering; CMU for its clips |
+| News, a log with the newest first and no dates shown, **one folder per partner**; `author:` names who wrote it, `draft: true` hides it; optional `gallery:` (photos with `alt:` and `caption:`) and `link:` / `linkLabel:` (paper, poster, code) | `content/updates/<partner>/YYYY-MM-DD-slug.md` (`st`, `nus`, `upenn`, `cmu`), images in `content/updates/<partner>/images/` | That partner |
+| Site title, footer | `content/site.yml` | ST Engineering |
+| What's next: three cards with a `state:` chip ("Work in progress", "Future work"), no dates | `content/programme/next.md` | ST Engineering |
 
 - **The schema is the contract:** `src/content.config.ts` validates every file at build time. Add a
   field to the schema before using it. Never weaken a rule to make a broken file pass.
@@ -239,13 +250,13 @@ On phones the panel opens full width under the header.
 | 1 | Hero | Title, then the button row ("Watch the film" first, then Latest updates and Meet the partners), above a rounded 16:9 panel: a silent loop cut from the programme film, a pause button, and "Watch the film", which plays the film with sound in the same panel (Close button and Escape lead back). Poster: the film's title frame; reduced motion shows the poster. See §9 "Home hero" |
 | 1a | How it works | Two explainer films side by side, straight after the hero (§9 "Explainer films") |
 | 2 | Logo row | ST, NUS, UPenn, CMU, then "Funded by HTX" |
-| 3 | At a glance + Latest | Status lines from `glance.md` (grouped by `state:`) beside a rail of the 5 latest posts |
-| 4 | Partner cards | "Partner page →" and, when the partner has posted, "Latest update · <date>" |
+| 3 | At a glance + Latest | "Milestones" rows from `glance.md` (grouped by `state:`) beside a rail of the 5 latest posts (title and summary only: no date, partner or author line) |
+| 4 | Partner cards | "Partner page →" and, when the partner has posted, "Latest update →" (a link to that post, no date) |
 | 5 | Research themes | Five rows from `themes.md` |
 | 6 | Interactive drone | Full explain mode, partner names in the callouts (effects below) |
 | 7 | Flights | Lead clip + 3 |
 | 8 | Publications | Teaser of the Publications page |
-| 9 | People | Team photo and names, then the footer (colour logo strip, "Four labs, in Singapore, Pittsburgh and Philadelphia. Funded by HTX.") |
+| 9 | People | Team photo and names, then the footer: the page's own colours with a hairline above, colour logos straight on it (no tiles in light mode), "Four labs, in Singapore, Pittsburgh and Philadelphia. Funded by HTX." |
 
 **Interactive drone effects:** selecting a part lights it and shows its name (two-way peek with the
 connection diagram); leader lines draw on scroll-in; flight dots march while Flight is lit; the
@@ -253,12 +264,13 @@ Strategy layer pulses; **ring drift only while Safety is lit**; **no count-ins a
 All stop under `prefers-reduced-motion`.
 
 **Research (`/research/`, was Programme):** positioning statement, the two tracks, "How a command
-travels" (`command.md`), "We try it in simulation first" (`simulation.md`, with "What we haven't
-solved yet"), localisation (three questions, the plan as targets, a figure, `open:`), and directions
+travels" (`command.md`), "We try it in simulation first" (`simulation.md`), localisation (three questions, the plan as an
+ordered list of targets, a figure), and directions
 as 3 lines. Each theme has an anchor (`#learning`, `#formal`, `#safety`, `#localisation`,
-`#simulation`). The 0.081 m figure appears only in Localisation and the October post. Type is larger
+`#simulation`). The 0.081 m figure appears only in Localisation and one ST post. Type is larger
 and standardised (h2 step-4, body step-1).
 
+- **No "Source on GitHub" link in the footer** (owner, 24 Nov 2026). `site.yml` keeps `repository:` for the partner pages' "Edit this page" link.
 - **No repository paths on public pages.** A partner page carries no "this is X's file" band and no file path (removed 18 Nov 2026 at the owner's request; the footer's file list went on 4 Nov). The only editing hint is the line "Maintained by … · Edit this page" in the page's details box.
 
 **Partners (`/partners/`, h1 "Who does what"):** "Each partner writes and maintains its own page.";
@@ -269,8 +281,8 @@ partner from the person marked `lead: true` with a `bio:` (photo, name linked to
 **Partner page (`src/pages/partners/[id].astro`):**
 - Top line: "This is NUS's own file · Edit". Header and meta card; "Maintained by <Short> · updated
   <date> · Edit this page" sits in "At a glance".
-- People: a row with faces from `people:` (the lead first, tagged "PI"; the meta box says "Principal
-  investigator"). The word "Lead" is not used for people.
+- People: faces from `people:`, centred on the page (96 px photos, name and role centred under each,
+  owner 24 Nov 2026), the lead first, tagged "PI"; the meta box says "Principal investigator". The word "Lead" is not used for people.
 - "About the lab": `labBlurb:` on the left, the bios of people with `bio:` (lead first, face, role,
   "Profile →") on the right. Skipped when both are empty. Home and cards stay as they are.
 - "In the system": `DroneDiagram` in `partner` mode, with that partner's layers lit.
@@ -282,17 +294,17 @@ partner from the person marked `lead: true` with a `bio:` (photo, name linked to
 **Flights (`/flights/`):** the CMU cage photo (credit line), a lead clip at full width and the other
 clips in a grid, each with a mono stamp line and a "Watch …" cue; CMU's outdoor clip (`outdoor.md`);
 the test ladder M1–M6 (`ladder.md`; **M6, the first Starling flight in Singapore, is done**) with the
-annotated Singapore lab photo; the localisation status line; milestones. (No open list on Flights
+annotated Singapore lab photo; the localisation status line; "What's next" (work in progress and future work, no dates). (No open list on Flights
 since 4 Nov 2026.)
 
 **Publications (`/publications/`):** every partner's `publications:`, one section per partner (anchor
-= partner id), in partner order. A partner with none shows "None yet (as of <date>)".
+= partner id), in partner order. A partner with none shows "None yet."
 
 **No Contribute page** (removed 6 Nov 2026; `/contribute/` redirects to home). How to edit is for
 editors, not visitors: it lives in CONTRIBUTING.md and the README on GitHub. Empty states say "No
 posts yet." / "None yet." with no how-to link.
 
-**Updates (`/updates/`):** a dated log with a partner filter; each post shows its `author:`, its
+**Updates (`/updates/`):** a log, newest first, with a partner filter and no dates shown; each post shows its `author:`, its
 `gallery:` as a photo strip and its optional `link:`. Posts are `updates/[...id]` (the id includes
 the partner folder; the build fails if a post's `partner:` differs from its folder). The two posts that
 moved into `updates/st/` keep their old addresses as redirects.

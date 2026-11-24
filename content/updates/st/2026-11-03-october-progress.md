@@ -1,5 +1,5 @@
 ---
-title: "October: Starlings in the simulator, three flights at CMU"
+title: "Starlings in the simulator, three flights at CMU"
 date: 2026-11-03
 partner: st
 author: Jeremy Chia Hwe Huang
@@ -8,7 +8,7 @@ summary: >-
   localisation has a first number, and three Starlings flew at CMU with no pilot.
 ---
 
-October was the month the Starling 2 Max started flying in the AirStack simulator. We built a
+The Starling 2 Max has started flying in the AirStack simulator. We built a
 construction-site world for it, and up to three Starlings now fly there at once on the same software
 as the real drones.
 

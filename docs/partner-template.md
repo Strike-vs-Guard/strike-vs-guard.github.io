@@ -36,7 +36,7 @@ website: https://example.org                 # optional, full https:// address
 contact: someone@example.org                 # optional, public
 order: 6                                     # partner order: ST Engineering 2, NUS 3, UPenn 4, CMU 5
 # page: false                                # only for a card with no page (the funder)
-updated: 2026-11-05                          # YYYY-MM-DD of your last edit
+updated: 2026-11-05                          # YYYY-MM-DD of your last edit (not shown on the site)
 people:
   - name: Prof Firstname Lastname
     role: Professor, Department
@@ -66,7 +66,7 @@ publications: []
 
 ## What we're trying
 
-Write as "we". Name people and dates, give one number per claim with its conditions.
+Write as "we". Name people, give one number per claim with its conditions, and leave dates out (STANDARDS §2).
 
 ## What we've flown
 

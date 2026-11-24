@@ -5,12 +5,6 @@ eyebrow: In simulation
 title: We try it in simulation first
 order: 3
 note: Simulation only. The real flights are on the Flights page.
-openLabel: What we haven't solved yet
-open:
-  - "Skills trained from fixed starting positions fail outside them: in a first test, two Guard drones against one Strike drone held the zone in about 20 % of games."
-  - "With 10 drones, a Wi-Fi lag of about 0.7 s would hurt a safety filter that runs on the ground rather than on the drones."
-  - "The AirStack simulator flies up to three Starlings at once so far. NUS's simulated games use eight drones."
-  - "Against 5 Strike drones, UPenn found that adding Guard drones alone didn't keep the zone clear. Better coordination is still to come."
 items:
   - title: Holding the zone
     text: "NUS: five Guard drones (blue) keep three faster Strike drones (red) out of the zone."

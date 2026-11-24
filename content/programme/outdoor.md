@@ -3,7 +3,7 @@
 eyebrow: Outdoors
 title: Starlings outdoors at CMU
 order: 13
-note: Real flights at CMU's outdoor test site, from the July 2026 report.
+note: Real flights at CMU's outdoor test site, from an earlier programme report.
 items:
   - title: Several Starlings at once
     text: "CMU's Starlings flying together at its outdoor test site, on satellite positioning instead of the indoor cameras. Watch them keep their spacing."
