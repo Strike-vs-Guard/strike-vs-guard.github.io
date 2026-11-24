@@ -269,6 +269,7 @@ as 3 lines. Each theme has an anchor (`#learning`, `#formal`, `#safety`, `#local
 `#simulation`). The 0.081 m figure appears only in Localisation and one ST post. Type is larger
 and standardised (h2 step-4, body step-1).
 
+- **No "Source on GitHub" link in the footer** (owner, 24 Nov 2026). `site.yml` keeps `repository:` for the partner pages' "Edit this page" link.
 - **No repository paths on public pages.** A partner page carries no "this is X's file" band and no file path (removed 18 Nov 2026 at the owner's request; the footer's file list went on 4 Nov). The only editing hint is the line "Maintained by … · Edit this page" in the page's details box.
 
 **Partners (`/partners/`, h1 "Who does what"):** "Each partner writes and maintains its own page.";
