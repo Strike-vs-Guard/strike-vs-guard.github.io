@@ -250,13 +250,17 @@ On phones the panel opens full width under the header.
 | 1 | Hero | Title, then the button row ("Watch the film" first, then Latest updates and Meet the partners), above a rounded 16:9 panel: a silent loop cut from the programme film, a pause button, and "Watch the film", which plays the film with sound in the same panel (Close button and Escape lead back). Poster: the film's title frame; reduced motion shows the poster. See §9 "Home hero" |
 | 1a | How it works | Two explainer films side by side, straight after the hero (§9 "Explainer films") |
 | 2 | Logo row | ST, NUS, UPenn, CMU, then "Funded by HTX" |
-| 3 | At a glance + Latest | "Milestones" rows from `glance.md` (grouped by `state:`) beside a rail of the 5 latest posts (title and summary only: no date, partner or author line) |
-| 4 | Partner cards | "Partner page →" and, when the partner has posted, "Latest update →" (a link to that post, no date) |
+| 3 | At a glance + Latest | "Milestones" rows from `glance.md` (grouped by `state:`) beside a rail of the 5 latest posts (title and summary only: no date, partner or author line); phones show 2 |
+| 4 | Partner cards | "Partner page →" and, when the partner has posted, "Latest update →" (a link to that post, no date); left out on phones |
 | 5 | Research themes | Five rows from `themes.md` |
 | 6 | Interactive drone | Full explain mode, partner names in the callouts (effects below) |
-| 7 | Flights | Lead clip + 3 |
+| 7 | Flights | Lead clip + 3; on phones the 3 sit in a closed "More flights" bar |
 | 8 | Publications | Teaser of the Publications page |
 | 9 | People | Team photo and names, then the footer: the page's own colours with a hairline above, colour logos straight on it (no tiles in light mode), "Four labs, in Singapore, Pittsburgh and Philadelphia. Funded by HTX." |
+
+**Phones (≤720 px, owner's pick E2, 25 Nov 2026):** the home page drops to about 13 screens from 18.6
+(the rows marked above; People two per row with 48 px photos, roles kept). At a glance is never folded.
+Desktop is unchanged.
 
 **Interactive drone effects:** selecting a part lights it and shows its name (two-way peek with the
 connection diagram); leader lines draw on scroll-in; flight dots march while Flight is lit; the

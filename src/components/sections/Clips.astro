@@ -12,6 +12,9 @@
  * partners) and gives `text` as "What to watch:".
  * `skip` leaves out clips by video file name (the home page skips the hero clip); `limit` caps the number
  * of clips (lead included); `more` adds a link beside the title, e.g. "All flights →".
+ * `phoneFold` (home flights block, owner's pick E2, 25 Nov 2026): on phones (≤720 px) the clips after the lead
+ * sit in a closed bar with this label; on wider screens the bar is open and its label hidden, so the page
+ * looks as before. Without JavaScript the bar stays open.
  */
 import { getCollection } from 'astro:content';
 import Clip from '../Clip.astro';
@@ -27,8 +30,10 @@ interface Props {
   skip?: string[];
   limit?: number;
   more?: { href: string; label: string };
+  phoneFold?: string;
 }
-const { id, body = false, alt = false, aspect, lead = false, log = false, skip = [], limit, more } = Astro.props;
+const { id, body = false, alt = false, aspect, lead = false, log = false, skip = [], limit, more, phoneFold } =
+  Astro.props;
 const data = await section(id);
 const { Content } = data;
 const titleId = `${id}-title`;
@@ -39,6 +44,15 @@ const items = data.items.filter((c) => !c.video || !skip.includes(c.video)).slic
 const [first, ...rest] = items;
 const leadItem = lead && first?.video ? first : undefined;
 const gridItems = leadItem ? rest : items;
+const fold = !!(phoneFold && leadItem && gridItems.length > 0);
+const Wrap = fold ? 'details' : 'div';
+/* Closes the bar on phones before first paint and reopens it if the window grows past 720 px. */
+const foldScript = `(() => {
+  const mq = matchMedia('(max-width: 720px)');
+  const set = () => document.querySelectorAll('details[data-phone-fold]').forEach((d) => { d.open = !mq.matches; });
+  set();
+  mq.addEventListener('change', set);
+})();`;
 ---
 
 <section id={id} class:list={['section', 'section--clips-large', { 'section--alt': alt }]} aria-labelledby={titleId}>
@@ -80,35 +94,47 @@ const gridItems = leadItem ? rest : items;
     }
     {
       gridItems.length > 0 && (
-        <div class:list={['clips', { 'clips--three': lead }]}>
-          {gridItems.map((c) => (
-            <figure class="clip-card">
-              {c.video && (
-                <Clip
-                  video={c.video}
-                  poster={c.poster}
-                  videoAlt={c.videoAlt}
-                  posterAlt={c.posterAlt}
-                  altLabel={c.altLabel}
-                  title={c.title}
-                  aspect={lead ? '16 / 9' : aspect}
-                  media={lead}
-                />
-              )}
-              <figcaption>
-                {log && stamp(c) && <span class="clip-card__stamp">{stamp(c)}</span>}
-                <strong>{c.title}</strong>
-                {c.text && <span>{c.text}</span>}
-                {c.credit && <span class="clip-card__credit">{c.credit}</span>}
-              </figcaption>
-            </figure>
-          ))}
-        </div>
+        <Wrap class:list={{ 'clips-fold': fold }} open={fold || undefined} data-phone-fold={fold || undefined}>
+          {fold && (
+            <summary>
+              <span>{phoneFold}</span>
+              <span class="clips-fold__n">
+                {gridItems.length} {gridItems.length === 1 ? 'clip' : 'clips'}
+              </span>
+            </summary>
+          )}
+          <div class:list={['clips', { 'clips--three': lead }]}>
+            {gridItems.map((c) => (
+              <figure class="clip-card">
+                {c.video && (
+                  <Clip
+                    video={c.video}
+                    poster={c.poster}
+                    videoAlt={c.videoAlt}
+                    posterAlt={c.posterAlt}
+                    altLabel={c.altLabel}
+                    title={c.title}
+                    aspect={lead ? '16 / 9' : aspect}
+                    media={lead}
+                  />
+                )}
+                <figcaption>
+                  {log && stamp(c) && <span class="clip-card__stamp">{stamp(c)}</span>}
+                  <strong>{c.title}</strong>
+                  {c.text && <span>{c.text}</span>}
+                  {c.credit && <span class="clip-card__credit">{c.credit}</span>}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </Wrap>
       )
     }
     {data.note && <p class="section__note">{data.note}</p>}
   </div>
 </section>
+
+{fold && <script is:inline set:html={foldScript} />}
 
 <style>
   .clips {
@@ -147,6 +173,56 @@ const gridItems = leadItem ? rest : items;
   }
   .clip-card--lead figcaption {
     max-width: 68ch;
+  }
+  /* phoneFold: a bar on phones; on wider screens only the clips show (the bar is kept open). */
+  .clips-fold > summary {
+    display: none;
+  }
+  @media (max-width: 720px) {
+    .clips-fold {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .clips-fold > summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 18px;
+      cursor: pointer;
+      list-style: none;
+      font-weight: 600;
+      font-size: var(--step-1);
+    }
+    .clips-fold > summary::-webkit-details-marker {
+      display: none;
+    }
+    .clips-fold__n {
+      font-weight: 400;
+      font-size: var(--step--1);
+      color: var(--muted);
+    }
+    .clips-fold > summary::after {
+      content: '';
+      margin-left: auto;
+      flex: none;
+      width: 9px;
+      height: 9px;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      transform: translateY(-3px) rotate(45deg);
+      transition: transform 0.15s;
+    }
+    .clips-fold[open] > summary::after {
+      transform: translateY(3px) rotate(-135deg);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .clips-fold > summary::after {
+        transition: none;
+      }
+    }
+    .clips-fold > .clips {
+      padding: 4px 18px 22px;
+    }
   }
   @media (min-width: 760px) {
     .clips {

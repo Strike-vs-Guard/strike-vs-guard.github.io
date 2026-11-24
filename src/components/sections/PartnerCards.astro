@@ -15,15 +15,17 @@ interface Props {
   heading?: string;
   /** Show the funder line under the cards (default true). */
   funderLine?: boolean;
+  /** Leave the section out on phones (≤720 px); the home page uses this (owner's pick E2, 25 Nov 2026). */
+  hideOnPhone?: boolean;
 }
-const { heading, funderLine = true } = Astro.props;
+const { heading, funderLine = true, hideOnPhone = false } = Astro.props;
 const { partners, funder } = await partnersInOrder();
 const updates = await allUpdates();
 const lastPost = (id: string) => updates.find((u) => u.data.partner === id);
 const H = heading ? 'h3' : 'h2';
 ---
 
-<section id="partners" class="section pc-sec" aria-labelledby={heading ? 'partners-title' : undefined}>
+<section id="partners" class:list={['section', 'pc-sec', { 'pc-sec--desk': hideOnPhone }]} aria-labelledby={heading ? 'partners-title' : undefined}>
   <div class="wrap">
     {
       heading && (
@@ -182,6 +184,9 @@ const H = heading ? 'h3' : 'h2';
   @media (max-width: 720px) {
     .pc {
       grid-template-columns: minmax(0, 1fr);
+    }
+    .pc-sec--desk {
+      display: none;
     }
   }
 </style>

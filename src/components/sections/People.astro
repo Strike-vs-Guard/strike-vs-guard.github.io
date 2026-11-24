@@ -3,6 +3,7 @@
  * Home: the team photo (content/programme/stack.md `image:`, `caption:`), then everyone with a photo in a
  * partner file's `people:` list, grouped by partner in partner order. The row is left out when nobody has
  * a photo yet. Within a partner, people with a `group:` (e.g. Interns) follow under a small heading. Holds #people.
+ * Phones (≤720 px): two people per row with smaller photos.
  */
 import { Image } from 'astro:assets';
 import { url } from '../../lib/url';
@@ -142,6 +143,38 @@ const groups = partners
   @media (max-width: 720px) {
     .pe__team :global(img) {
       aspect-ratio: 4 / 3;
+    }
+    /* Phones: two people per row, 48 px photos, roles kept (owner's pick E2, 25 Nov 2026). */
+    .pe__groups {
+      margin-top: 28px;
+      gap: 22px;
+    }
+    .pe__grp h3 {
+      font-size: var(--step-1);
+      margin-bottom: 10px;
+    }
+    .pe__row {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px 12px;
+    }
+    .pe__row b,
+    .pe__row .muted {
+      overflow-wrap: break-word;
+    }
+    .pe__row li {
+      grid-template-columns: 48px minmax(0, 1fr);
+      gap: 10px;
+      align-items: start;
+    }
+    .pe__row :global(img) {
+      width: 48px;
+      height: 48px;
+    }
+  }
+  /* Narrow phones (iPhone SE, small Android): one person per row, so long names are not squeezed. */
+  @media (max-width: 379px) {
+    .pe__row {
+      grid-template-columns: minmax(0, 1fr);
     }
   }
 </style>
