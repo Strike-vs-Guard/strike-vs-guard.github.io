@@ -112,10 +112,10 @@ const clipTitle = flights.items.find((c) => c.video === overview.video)?.title ?
   <div class="home">
     <Explainers />
     <Glance />
-    <PartnerCards heading="Partners" funderLine={false} />
+    <PartnerCards heading="Partners" funderLine={false} hideOnPhone />
     <Themes />
     <Layers />
-    <Clips id="flights" lead log limit={4} skip={overview.video ? [overview.video] : []} more={{ href: url('flights/'), label: 'All flights →' }} />
+    <Clips id="flights" lead log limit={4} skip={overview.video ? [overview.video] : []} more={{ href: url('flights/'), label: 'All flights →' }} phoneFold="More flights" />
     <PublicationsTeaser />
     <People />
   </div>

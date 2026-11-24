@@ -536,6 +536,15 @@ on a row of their own). Two reviewers preferred A or D and both advised against 
 a left-aligned site); he chose B. Built with slightly narrower cards than the draft so a five-person team
 fits on one row on laptops and desktops instead of leaving one person alone underneath.
 
+## 30. Shorter home page on phones (25 November 2026)
+> For the phone version, at the main page should we make some content a drop down bar instead? Like "At a
+> glance" and "Latest"? … ok go with E2
+
+The home page was 18.6 screens long on a phone. A draft with options went to him: A (his idea, fold At a
+glance and Latest), B, C, D and E. Two reviewers advised against folding At a glance, since it is the only
+summary and holds the Milestones. E (their combination) also removed the drone drawing, which appears
+nowhere else; he chose E2, which keeps it. Built for phones only: 13.3 screens, desktop unchanged.
+
 ---
 
 ## Review links (private claude.ai pages, owner: Jeremy)

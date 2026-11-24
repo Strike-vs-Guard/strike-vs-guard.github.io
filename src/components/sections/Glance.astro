@@ -5,6 +5,7 @@
  * content/programme/glance.md (or status.md). No timeline and no "next milestone" rows (STANDARDS §2):
  * one item per line, grouped by `state:` (Done, In progress, Not yet); no "as of" line.
  * Latest: the five newest posts (title and summary only), newest first; no date, partner or author line.
+ * Phones (≤720 px) show the two newest only.
  */
 import { getEntry } from 'astro:content';
 import { url } from '../../lib/url';
@@ -212,6 +213,13 @@ const groups = status
     .gl__dl > div {
       grid-template-columns: minmax(0, 1fr);
       gap: 4px;
+    }
+    /* Phones: the two newest posts only; "All updates →" leads to the rest (owner's pick E2, 25 Nov 2026). */
+    .rail li:nth-child(n + 3) {
+      display: none;
+    }
+    .rail li:nth-child(2) {
+      border-bottom: 1px solid var(--border);
     }
   }
 </style>
