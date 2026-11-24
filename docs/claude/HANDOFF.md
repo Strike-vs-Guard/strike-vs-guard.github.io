@@ -39,6 +39,10 @@ site owner driving the work is Jeremy (ST Engineering); the ST lead is William T
 ## 4. Current state
 
 **As of 24 Nov 2026 (newest first; the older notes below are history):**
+- **White footer (owner, 24 Nov, last).** The footer is no longer a brand-blue band: it uses the page's
+  colours (`--bg`, `--text`) with a hairline (`--border`) above; logos sit straight on it in light mode
+  (the white plates are invisible on white) and stay white tiles in dark mode. `src/layouts/Base.astro`,
+  STANDARDS (`--band` row, logos bullet, page-structure row 9). Rides in PR #15. jeremy.md §28.
 - **No dates on the site at all (owner, 24 Nov, later the same day).** Page text, captions, alt text,
   post titles and listings carry no day, month or year; templates print no post date, no "updated"
   date and no "as of"; the footer has no year. Clip banners carry no date (`st-fig8-two-starlings`,

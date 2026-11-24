@@ -516,6 +516,17 @@ recordings. Two reviewer agents checked it. The second found that some sentences
 as standing claims or current plans ("have flown", "Next come both drones moving"); those were
 reworded so each past flight reads as one past flight.
 
+## 28. White footer (24 November 2026)
+> For the bottom of the icons can you remove the white background? … Can you do a draft where the
+> logos are just directly on the footer? … Can you try the white footer with the logos? … I think we
+> try the white footer on the page, build the website.
+
+Drafts in `~/Downloads/svg-footer-options/` (colour logos on blue, white logos on blue, white footer).
+He chose the white footer: the footer now uses the page's own colours (white in light mode, navy in
+dark) with a thin grey line above it, and the colour logos sit straight on it with no tiles. In dark
+mode they stay white tiles. The grey line he asked about is that divider between the last section and
+the footer, which used to be hidden by the blue band.
+
 ---
 
 ## Review links (private claude.ai pages, owner: Jeremy)

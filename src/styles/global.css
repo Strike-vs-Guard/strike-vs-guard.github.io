@@ -14,7 +14,7 @@
   --brand-blue: #1a3e62;
   /* brand blue as text (links, status words): #1A3E62 in light, lighter in dark for contrast on --bg */
   --link: var(--brand-blue);
-  /* Bands that stay dark in both themes (footer, partner-page file line), and the text on them. */
+  /* Bands that stay dark in both themes (partner-page file line), and the text on them. Not the footer since 24 Nov 2026. */
   --band: var(--brand-blue);
   --band-text: #e8edf2;
   --band-muted: #b4c2d0;

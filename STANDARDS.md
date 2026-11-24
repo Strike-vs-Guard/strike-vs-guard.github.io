@@ -103,7 +103,7 @@ sets `data-theme` before first paint (no flash). If CMU's video overlay is kept,
 | brand red | #B3122E | #FF5A6E | **type, rules and bands only**: wordmark, one rule under the hero title, the "We are here" marker |
 | brand blue | #1A3E62 | #1A3E62 | bands and links only |
 | `--link` | #1A3E62 | `--text` | brand blue as link text in light; plain text colour in dark (guard blue stays in game figures) |
-| `--band` / `--band-text` / `--band-muted` / `--band-accent` | #1A3E62 / #E8EDF2 / #B4C2D0 / #FF8A98 | same | bands that stay dark in both themes: footer, partner-page file line (text 9.3:1, muted 6.1:1, accent 4.9:1) |
+| `--band` / `--band-text` / `--band-muted` / `--band-accent` | #1A3E62 / #E8EDF2 / #B4C2D0 / #FF8A98 | same | bands that stay dark in both themes (text 9.3:1, muted 6.1:1, accent 4.9:1). Not the footer: since 24 Nov 2026 it uses the page's colours (white in light, navy in dark) with a hairline above |
 | `--media` | #0B1622 | #0B1622 | behind and over video only: hero panel, play-button discs |
 | `--strike` | #D9542C | #F2766A | **only** the Strike team inside game figures |
 | `--guard` | #2D6FD0 | #6FA3F5 | **only** the Guard team inside game figures |
@@ -155,7 +155,8 @@ Section padding is 96 to 112 px. Corners are 3 px. Rules, not boxed cards. Text 
 - Logos are shown **in colour**, each on a white plate image (3 px corners) of the same size in both
   themes: 2:1 for a single logo (home row, footer, "Funded by" HTX), 3:1 for institution + lab with a
   hairline between them, and a square chip in the Partners menu. On the white page in light mode the
-  tile cannot be seen; on tinted bands, in dark mode and on the dark footer band it is a white tile
+  tile cannot be seen (the footer included, which is white in light mode); on tinted bands and in dark
+  mode it is a white tile
   (see "Phones"). (6 Nov 2026; greyscale-until-hover withdrawn 3 Nov.)
 - **Logo sizing is by visual weight**, baked into the plates (`RECIPE` in `src/lib/logo.ts`): height =
   a × plate height × 1/√(width ÷ height), 10 % less for square solid-colour tiles, capped in height and
@@ -255,7 +256,7 @@ On phones the panel opens full width under the header.
 | 6 | Interactive drone | Full explain mode, partner names in the callouts (effects below) |
 | 7 | Flights | Lead clip + 3 |
 | 8 | Publications | Teaser of the Publications page |
-| 9 | People | Team photo and names, then the footer (colour logo strip, "Four labs, in Singapore, Pittsburgh and Philadelphia. Funded by HTX.") |
+| 9 | People | Team photo and names, then the footer: the page's own colours with a hairline above, colour logos straight on it (no tiles in light mode), "Four labs, in Singapore, Pittsburgh and Philadelphia. Funded by HTX." |
 
 **Interactive drone effects:** selecting a part lights it and shows its name (two-way peek with the
 connection diagram); leader lines draw on scroll-in; flight dots march while Flight is lit; the

@@ -333,18 +333,15 @@ const logoPartners = partners.filter((p) => p !== funder);
   }
 
   /*
-   * Footer: a brand-blue band in both themes (--band tokens, global.css), so its tokens are set here. The band is dark, so
-   * logos are white 2:1 plates (src/lib/logo.ts) in both themes (ST, NUS, UPenn, CMU), then "Funded by" HTX, smaller and set apart.
+   * Footer: the page's own colours (white in light, navy in dark) with a hairline above it (owner, 24 Nov 2026; it was a
+   * brand-blue band). Logos are the white 2:1 plates (src/lib/logo.ts): on the white footer the plate cannot be seen, so the
+   * logos sit straight on the page; in dark mode they are white tiles, as everywhere else. Then "Funded by" HTX, set apart.
    */
   .site-footer {
-    --text: var(--band-text);
-    --muted: var(--band-muted);
-    --link: var(--band-text);
-    --border: rgb(255 255 255 / 0.2);
     --well-border: transparent;
     --well-bg: var(--well);
-    --brand-red: var(--band-accent);
-    background: var(--band);
+    border-top: 1px solid var(--border);
+    background: var(--bg);
     color: var(--text);
     padding-block: 48px 32px;
     font-size: var(--step-0);
