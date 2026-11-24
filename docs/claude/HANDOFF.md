@@ -38,7 +38,12 @@ site owner driving the work is Jeremy (ST Engineering); the ST lead is William T
 
 ## 4. Current state
 
-**As of 18 Nov 2026 (newest first; the older notes below are history):**
+**As of 24 Nov 2026 (newest first; the older notes below are history):**
+- **No programme timeline on the site (owner, 24 Nov).** The three-year timeline on Flights is now
+  "What's next" (`content/programme/next.md`, `WhatsNext.astro`): three cards with a "Work in
+  progress" or "Future work" chip and no dates. "At a glance" lost its Timeline and Next milestone
+  rows; `site.yml` lost `start`/`end`; the localisation plan is an ordered list without dates.
+  Rule in STANDARDS §2. Dates of things that have happened stay.
 - **Home hero = the programme film.** Silent teaser loop + "Watch the film · 1:41" (film with sound in
   the same panel). Files `public/media/hero-film-teaser.mp4`, `svg-film.mp4`, poster
   `content/programme/images/hero-film-title.jpg`; fields `video:`, `film:`, `filmLabel:`,
@@ -139,7 +144,7 @@ Kxx7DfmQ51Hv3EoeFyBgFj). Spec: `docs/superpowers/specs/2026-11-03-v3-redesign-de
 | Pages | Research replaces Programme (`/programme/` redirects); new Publications and Contribute; Partners keeps only the connection diagram |
 | Home | Hero (title above a 2:1 clip panel), logo row, glance + latest (the only updates list on home; the strip was removed 5 Nov), partner cards, five themes, interactive drone, flights, publications, people |
 | Drone | Effects list in STANDARDS §5; ring drift only while Safety is lit; no count-ins or scan sweeps |
-| Content model | `content/updates/<partner>/` with `gallery:` and `link:`; `publications:` per partner; `glance.md`; `themes.md`; site `start`/`end` (June 2026 – June 2029) |
+| Content model | `content/updates/<partner>/` with `gallery:` and `link:`; `publications:` per partner; `glance.md`; `themes.md`; site `start`/`end` (removed 24 Nov 2026 with every other programme timeline) |
 | Content added | People photos for all partners; IROS 2026 posts and posters; UPenn STL-SVPIO paper; A0 poster (top half only); ladder M6 done |
 
 **Earlier work, already live or on `development`:**

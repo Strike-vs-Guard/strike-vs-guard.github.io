@@ -142,7 +142,7 @@ const item = (image: any) =>
     .object({
       title: z.string(),
       text: z.string().optional(),
-      /** Small label above the title, e.g. "Track A · Learning" or "Year 1". */
+      /** Small label above the title, e.g. "Track A · Learning". Never a year of the programme (STANDARDS §2). */
       label: z.string().optional(),
       /** Image path relative to the section file, e.g. ./images/flight-cage.jpg */
       image: image().optional(),
@@ -166,15 +166,13 @@ const item = (image: any) =>
       /** Optional strength / limitation lines (used for the two tracks). */
       plus: z.string().optional(),
       minus: z.string().optional(),
-      /** Optional date range or period, e.g. "2026 to 2027". */
+      /** A clip's length or the date of a flight, e.g. "0:53". Never a programme period or a target date (STANDARDS §2). */
       when: z.string().optional(),
-      /** Marks the current milestone. */
-      current: z.boolean().default(false),
       /** Short icon key, used by a few sections. */
       icon: z.string().optional(),
       /** What this step hands to the next one, shown on the arrow after it (command.md). */
       passes: z.string().max(40).optional(),
-      /** Short status shown as a chip, e.g. "Done" or "Ready to test" (ladder.md). */
+      /** Short status shown as a chip, e.g. "Done" or "Ready to test" (ladder.md); "Work in progress" or "Future work" (next.md). */
       state: z.string().max(24).optional(),
     })
     .strict();
@@ -301,9 +299,6 @@ const site = defineCollection({
     tagline: z.string(),
     description: z.string(),
     contactEmail: z.string().email().optional(),
-    /** Programme start and end, e.g. "June 2026" and "June 2029". */
-    start: z.string().optional(),
-    end: z.string().optional(),
     repository: url,
     footerNote: z.string(),
   }),

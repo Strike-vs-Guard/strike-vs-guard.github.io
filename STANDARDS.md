@@ -33,6 +33,11 @@ Precedence: the site owner's explicit instruction, then this file, then personal
 
 - It is a lab website: plain present tense and short sentences. No marketing language, and no
   mission or defence framing.
+- **No programme timeline (owner, 24 Nov 2026).** No "Year 1/2/3", no programme start or end dates, no
+  target dates and no "next milestone" anywhere on the site. Say what is **work in progress** and what
+  is **future work**, without dates (`content/programme/next.md`, the "What's next" section on Flights;
+  the localisation plan is an ordered list). Dates of things that have happened stay: flight dates,
+  post dates, "as of" notes, publication years.
 - **Never frame it as counter-UAS, counter-drone or defence.**
 - **One exception, by the site owner (18 Nov 2026): the programme film** behind "Watch the film" on the
   home page (`public/media/svg-film.mp4`, built in ST Engineering's demo project as `hero_v3_cuav.mp4`).
@@ -183,9 +188,10 @@ Everything editable is Markdown or YAML under `content/`. **Templates never hold
 | "About the lab" on the partner page: `labBlurb:` (three sentences in "we" voice, 420 characters or fewer: who you are, what you work on, your part in the programme) and `bio:` on a person (two sentences, third person, 300 or fewer: title, lab, research, degree; no awards) with an optional profile `link:`. Facts come from the lab's own website; a partner approves its own text | `content/partners/<NAME>.md` | That partner (drafted by ST Engineering) |
 | Open problems: `open:` list and `openLabel:` ("What we haven't solved yet"), one line each | `localisation.md`, `simulation.md` | ST Engineering |
 | Page head overrides: `pageEyebrow:` / `pageTitle:` (when the section also heads its own page) | `overview.md`, `flights.md` | ST Engineering |
-| Clips: `video:` + `poster:` on an item; a hero `video:` on a section; optional second take `videoAlt:` + `posterAlt:` with `altLabel:` (the toggle text, e.g. "Lights off") and a `credit:` line; `current: true` marks the active milestone | `content/programme/*.md`, files in `public/media/` | ST Engineering; CMU for its clips |
+| Clips: `video:` + `poster:` on an item; a hero `video:` on a section; optional second take `videoAlt:` + `posterAlt:` with `altLabel:` (the toggle text, e.g. "Lights off") and a `credit:` line | `content/programme/*.md`, files in `public/media/` | ST Engineering; CMU for its clips |
 | News, a dated log, **one folder per partner**; `author:` names who wrote it, `draft: true` hides it; optional `gallery:` (photos with `alt:` and `caption:`) and `link:` / `linkLabel:` (paper, poster, code) | `content/updates/<partner>/YYYY-MM-DD-slug.md` (`st`, `nus`, `upenn`, `cmu`), images in `content/updates/<partner>/images/` | That partner |
-| Site title, footer, programme `start:` / `end:` (June 2026 – June 2029, "Year 1 of 3") | `content/site.yml` | ST Engineering |
+| Site title, footer | `content/site.yml` | ST Engineering |
+| What's next: three cards with a `state:` chip ("Work in progress", "Future work"), no dates | `content/programme/next.md` | ST Engineering |
 
 - **The schema is the contract:** `src/content.config.ts` validates every file at build time. Add a
   field to the schema before using it. Never weaken a rule to make a broken file pass.
@@ -282,7 +288,7 @@ partner from the person marked `lead: true` with a `bio:` (photo, name linked to
 **Flights (`/flights/`):** the CMU cage photo (credit line), a lead clip at full width and the other
 clips in a grid, each with a mono stamp line and a "Watch …" cue; CMU's outdoor clip (`outdoor.md`);
 the test ladder M1–M6 (`ladder.md`; **M6, the first Starling flight in Singapore, is done**) with the
-annotated Singapore lab photo; the localisation status line; milestones. (No open list on Flights
+annotated Singapore lab photo; the localisation status line; "What's next" (work in progress and future work, no dates). (No open list on Flights
 since 4 Nov 2026.)
 
 **Publications (`/publications/`):** every partner's `publications:`, one section per partner (anchor

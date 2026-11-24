@@ -488,6 +488,19 @@ whole tile big and white everywhere, so each logo is now drawn at build time ont
 around a logo. Plates are drawn wider than 64 px, because Chromium's forced dark may invert smaller
 images (the NEAR Lab, xLab and Penn marks did in the stand-in).
 
+## 26. No programme timeline (24 November 2026)
+> Can you remove any mention of timeline, regarding year 1 to 2 or whatever. Show me what you intend
+> to remove first. … I need to remove items 1 to 4, but keep the framing for larger teams, flying
+> beyond the lab and whatever content: put that as future work / work in progress.
+
+Shown first, then done: the "A three-year programme" timeline on Flights (Year 1/2/3, year ranges,
+"We are here", the March 2027 target) became "What's next": three cards with a "Work in progress" or
+"Future work" chip and no dates. The Timeline and Next milestone rows left "At a glance"; the
+programme start and end left `site.yml`; the localisation plan's dated table became an ordered list
+and two sentences lost their dates. Kept: dates of flights, posts, "as of" notes, publication years
+and an intern's dates. Two reviewer agents checked it before the push (nothing left on any built page;
+wording claims no more than before; schema comments and the handoff tidied from their findings).
+
 ---
 
 ## Review links (private claude.ai pages, owner: Jeremy)

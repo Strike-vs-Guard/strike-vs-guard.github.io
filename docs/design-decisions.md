@@ -50,7 +50,7 @@ editing workflow, and the visual design. The decisions below reconcile their pro
   interactive drone, flights, publications, people); the Partners page keeps only the connection
   diagram; updates move to one folder per partner with `gallery:` and `link:`; `publications:` per
   partner; `glance.md` and `themes.md`; people photos for all partners; programme dates June 2026 –
-  June 2029. Spec: `docs/superpowers/specs/2026-11-03-v3-redesign-design.md`.
+  June 2029 (the timeline and these dates were removed from the site on 24 Nov 2026). Spec: `docs/superpowers/specs/2026-11-03-v3-redesign-design.md`.
 - Five layers: Strategy, Safety, Flight, **Localisation** (ST Engineering leads; CMU provides the
   simulator and technical advice), Drones, plus Integration across all.
 - The reports behind the localisation work are confidential. They are used for context only, and

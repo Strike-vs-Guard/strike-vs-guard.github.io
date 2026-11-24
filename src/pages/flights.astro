@@ -2,7 +2,7 @@
 /**
  * Flights page: the head with the cage-floor photo (flights.md `image:`), the October 2026 clips (one lead
  * clip, then three to a row, each with a stamp line), CMU's outdoor flights (stamped too), the test ladder with an
- * annotated photo of the Singapore lab, localisation status, milestones.
+ * annotated photo of the Singapore lab, localisation status, what's next.
  */
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
@@ -10,7 +10,7 @@ import PageHead from '../components/sections/PageHead.astro';
 import Clips from '../components/sections/Clips.astro';
 import TestLadder from '../components/sections/TestLadder.astro';
 import Localisation from '../components/sections/Localisation.astro';
-import Milestones from '../components/sections/Milestones.astro';
+import WhatsNext from '../components/sections/WhatsNext.astro';
 import AnnotatedPhoto from '../components/AnnotatedPhoto.astro';
 import { section } from '../components/sections/content';
 
@@ -51,7 +51,7 @@ const ladder = await section('ladder');
     }
   </TestLadder>
   <Localisation statusOnly />
-  <Milestones id="" alt={false} />
+  <WhatsNext id="" alt={false} />
 </Base>
 
 <style>
