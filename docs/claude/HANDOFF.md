@@ -41,7 +41,8 @@ site owner driving the work is Jeremy (ST Engineering); the ST lead is William T
 **As of 24 Nov 2026 (newest first; the older notes below are history):**
 - **Team-strategy explainer re-cut with the 24 Nov escort match (25 Nov, owner asked).** Source
   `~/SvG_Demo/video/fallback_escort.mp4` (R106), 0–53.50 s, 720p CRF 28, AAC 96 kb/s; new poster from the
-  new footage. Page text unchanged. On development; live on his say-so.
+  new footage. Page text unchanged. LIVE 25 Nov (PR #17, a8fa6ca; live file checked). Open: burned-in "out" vs
+  the site word "tagged" (owner's call, fix in the demo project).
 - **Phone home page shorter, owner picked E2: LIVE 25 Nov (PR #16, 173b438; live site checked: phone 13.3 screens, desktop 10,854 px).** Phones only (≤720 px):
   Latest shows 2 + "All updates →"; Flights = lead clip + a closed "More flights" bar (`Clips` `phoneFold`,
   open with its label hidden on wider screens and without JS); People two per row, 48 px photos, roles kept;
