@@ -39,13 +39,18 @@ site owner driving the work is Jeremy (ST Engineering); the ST lead is William T
 ## 4. Current state
 
 **As of 24 Nov 2026 (newest first; the older notes below are history):**
-- **Phone home page shorter, owner picked E2 (25 Nov), on development, not live.** Phones only (≤720 px):
+- **Team-strategy explainer re-cut with the 24 Nov escort match (25 Nov, owner asked).** Source
+  `~/SvG_Demo/video/fallback_escort.mp4` (R106), 0–53.50 s, 720p CRF 28, AAC 96 kb/s; new poster from the
+  new footage. Page text unchanged. On development; live on his say-so.
+- **Phone home page shorter, owner picked E2: LIVE 25 Nov (PR #16, 173b438; live site checked: phone 13.3 screens, desktop 10,854 px).** Phones only (≤720 px):
   Latest shows 2 + "All updates →"; Flights = lead clip + a closed "More flights" bar (`Clips` `phoneFold`,
   open with its label hidden on wider screens and without JS); People two per row, 48 px photos, roles kept;
   Partner cards left out (`PartnerCards` `hideOnPhone`, home only). At a glance and "Who builds which part"
   (the drone drawing, home only) stay. 390 px: 18.6 → 13.3 screens; under 380 px People go one per row (long names); desktop height unchanged (10,854 px). Reviewers: code + phone visitor, nothing serious.
   Rejected: A (fold At a glance + Latest), B, C, D, E (E dropped the drone drawing from phones entirely).
-  Release to main only on his say-so.
+  Offered, not asked for yet: phone menu on one row (now two, pinned, ~17 % of the screen); Flights intro
+  below the "More flights" bar; "Latest updates" button lands on At a glance; player controls over the
+  captions in "Two parts, a minute each".
 - **LIVE 25 Nov 2026 (owner: "push to main"):** PR #15 merged (69f5746): no timeline, no dates, "Milestones",
   open-problem lists removed, trimmed Latest list, no GitHub footer link, white footer, centred People.
   Live site checked after the deploy.
@@ -88,7 +93,9 @@ site owner driving the work is Jeremy (ST Engineering); the ST lead is William T
   `st-fig8-two-starlings.mp4`; scripts in `tools/video/`).
 - **Live site:** PR #12 merged 18 Nov: the film hero is live.
 - **Explainer films** (18 Nov): `public/media/explainer-team-strategy.mp4` and
-  `explainer-safety-layer.mp4`, cut from `~/SvG_Demo/video/fallback_escort.mp4` (0–52.70 s) and
+  `explainer-safety-layer.mp4`, cut from `~/SvG_Demo/video/fallback_escort.mp4` (0–53.50 s since 25 Nov:
+  the R106 build with the 24 Nov escort match; the end card starts fading in at 53.50 s; −0.5 dB (true peak −1.6 dBFS), 0.5 s audio fade-out;
+  poster = frame at 33.6 s) and
   `fallback_fig8.mp4` (0–46.92 s: from the first frame to where the QR end card starts) at 720p CRF 28
   with AAC 96 kb/s. The film and its teaser were re-exported the same day from the 102.9 s build
   (teaser: 60.79–63.92, 63.92–69.15, 73.33–77.50 s). If the demo project rebuilds a video, re-export
